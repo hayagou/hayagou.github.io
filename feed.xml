@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://hayagou.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hayagou.github.io/" rel="alternate" type="text/html" /><updated>2020-02-09T01:43:51+09:00</updated><id>https://hayagou.github.io/feed.xml</id><title type="html">Hayagou</title><author><name>hayagou</name></author><entry><title type="html">UML과 클래스 다이어그램</title><link href="https://hayagou.github.io/2019/10/30/uml.html" rel="alternate" type="text/html" title="UML과 클래스 다이어그램" /><published>2019-10-30T12:45:13+09:00</published><updated>2019-10-30T12:45:13+09:00</updated><id>https://hayagou.github.io/2019/10/30/uml</id><content type="html" xml:base="https://hayagou.github.io/2019/10/30/uml.html">&lt;h1 id=&quot;uml&quot;&gt;UML&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://hayagou.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hayagou.github.io/" rel="alternate" type="text/html" /><updated>2020-02-09T04:05:53+09:00</updated><id>https://hayagou.github.io/feed.xml</id><title type="html">Hayagou</title><author><name>hayagou</name></author><entry><title type="html">UML과 클래스 다이어그램</title><link href="https://hayagou.github.io/2019/10/30/uml.html" rel="alternate" type="text/html" title="UML과 클래스 다이어그램" /><published>2019-10-30T12:45:13+09:00</published><updated>2019-10-30T12:45:13+09:00</updated><id>https://hayagou.github.io/2019/10/30/uml</id><content type="html" xml:base="https://hayagou.github.io/2019/10/30/uml.html">&lt;h1 id=&quot;uml&quot;&gt;UML&lt;/h1&gt;
 &lt;hr /&gt;
 
 &lt;blockquote&gt;
@@ -79,4 +79,70 @@
 &lt;/table&gt;
 
 &lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">UML UML의 구성 요소 사물(Things) : 기본 요소 관계(Relationship) : 사물 간의 관계 다이어그램(Diagram) : 사물관 관계를 도형으로 표현</summary></entry></feed>
+&lt;br /&gt;&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">UML UML의 구성 요소 사물(Things) : 기본 요소 관계(Relationship) : 사물 간의 관계 다이어그램(Diagram) : 사물관 관계를 도형으로 표현</summary></entry><entry><title type="html">Grid Option</title><link href="https://hayagou.github.io/2019/10/30/grid_optoin.html" rel="alternate" type="text/html" title="Grid Option" /><published>2019-10-30T12:45:13+09:00</published><updated>2019-10-30T12:45:13+09:00</updated><id>https://hayagou.github.io/2019/10/30/grid_optoin</id><content type="html" xml:base="https://hayagou.github.io/2019/10/30/grid_optoin.html">&lt;h1 id=&quot;부트스트랩-grid-options--offset-nesting-ordering&quot;&gt;[부트스트랩] Grid options : offset, nesting, ordering&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;디바이스 사이즈&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;xs : 스마트폰 사이즈&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;sm : 태블릿 사이즈&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;md : 데스크탑 사이즈&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;lg : 큰 모니터 사이즈&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;offset&quot;&gt;offset&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+col-*-offset-*
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;요소를 옮기고 싶을때 사용&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;nesting&quot;&gt;nesting&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+.container
+    .row
+	 .col-md-*
+		row               //row가 두개 이상들어갈수 있다.
+			.col-md-*
+			.col-md-*
+		row
+			.col-md-*
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;요소들을 묶을때 사용, 중첩 구문&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ordering&quot;&gt;ordering&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+col-*-push-*  //오른쪽으로 밀어냄
+
+col-*-pull-*  //왼쪽으로 밀어냄
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;요소들의 순서를 바꾸어 줌&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">[부트스트랩] Grid options : offset, nesting, ordering</summary></entry></feed>
