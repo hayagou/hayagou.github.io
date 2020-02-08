@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-08T22:51:15+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hayagou</title><author><name>hayagou</name></author><entry><title type="html">디자인 패턴</title><link href="http://localhost:4000/2019/10/30/uml.html" rel="alternate" type="text/html" title="디자인 패턴" /><published>2019-10-30T12:45:13+09:00</published><updated>2019-10-30T12:45:13+09:00</updated><id>http://localhost:4000/2019/10/30/uml</id><content type="html" xml:base="http://localhost:4000/2019/10/30/uml.html">&lt;h1 id=&quot;uml&quot;&gt;UML&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;UML의 구성 요소&lt;/strong&gt;&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;strong&gt;사물(Things)&lt;/strong&gt; : 기본 요소&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;관계(Relationship)&lt;/strong&gt; : 사물 간의 관계&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;다이어그램(Diagram)&lt;/strong&gt; : 사물관 관계를 도형으로 표현
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;사물things&quot;&gt;사물(Things)&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;사물은 추상적 개념으로서 모델에서 가장 중요&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;구조사물 : 시스템의 구조를 표현하는 사물&lt;/li&gt;
+  &lt;li&gt;해동사물 : 시스템의 행위를 표현하는 사물&lt;/li&gt;
+  &lt;li&gt;그룹사물 : 개념을 그룹화하는 사물&lt;/li&gt;
+  &lt;li&gt;주해사물 : 부가적으로 개념을 설명하는 사물
+&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;관계&quot;&gt;관계&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;요소가 서로 연관되는 방법&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;관계&lt;/th&gt;
+      &lt;th&gt;표시&lt;/th&gt;
+      &lt;th&gt;설명&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;연관관계(association)&lt;/td&gt;
+      &lt;td&gt;&lt;img data-action=&quot;zoom&quot; src=&quot;/img/posts/uml/association.png&quot; alt=&quot;association&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;두 사물간의 의미적  관계, 하나의 요소의 변화는 다른 하나에 영향을 미치는 두가지 사이의 관계&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;일반화  관계(generalization)&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/img/posts/uml/generalization.png&quot; alt=&quot;generalization&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;클래스와 인터페이스 사이에서 상속관계를 설명&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;집약관계(aggregation)&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/img/posts/uml/aggregation.png&quot; alt=&quot;aggregation&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;라이프  타임은  독립적전체, 객체가 없어져도 부분 객체는  없어지지않는다&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;합성  관계(composition)&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/img/posts/uml/composition.png&quot; alt=&quot;composition&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;라이프  타임은  의존적, 전체  객체가  없어지면  부분객체도  없어진다.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;의존관계(dependency)&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/img/posts/uml/dependency.png&quot; alt=&quot;dependency&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;연관  관계와  같음, 차이점은  두  클래스의  관계가  한  메서드를  실행하는  동안과  같은, 매우  짧은  시간만  유지된다는  점이다.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;실체화  관계(realization)&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/img/posts/uml/realization.png&quot; alt=&quot;realization&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;인터페이스와  클래스  컴포넌트  사이의  관계를  지정&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">UML UML의 구성 요소 사물(Things) : 기본 요소 관계(Relationship) : 사물 간의 관계 다이어그램(Diagram) : 사물관 관계를 도형으로 표현</summary></entry></feed>
