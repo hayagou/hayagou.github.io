@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://hayagou.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hayagou.github.io/" rel="alternate" type="text/html" /><updated>2020-02-09T04:05:53+09:00</updated><id>https://hayagou.github.io/feed.xml</id><title type="html">Hayagou</title><author><name>hayagou</name></author><entry><title type="html">UML과 클래스 다이어그램</title><link href="https://hayagou.github.io/2019/10/30/uml.html" rel="alternate" type="text/html" title="UML과 클래스 다이어그램" /><published>2019-10-30T12:45:13+09:00</published><updated>2019-10-30T12:45:13+09:00</updated><id>https://hayagou.github.io/2019/10/30/uml</id><content type="html" xml:base="https://hayagou.github.io/2019/10/30/uml.html">&lt;h1 id=&quot;uml&quot;&gt;UML&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://hayagou.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hayagou.github.io/" rel="alternate" type="text/html" /><updated>2020-02-09T19:03:45+09:00</updated><id>https://hayagou.github.io/feed.xml</id><title type="html">Hayagou</title><author><name>hayagou</name></author><entry><title type="html">UML과 클래스 다이어그램</title><link href="https://hayagou.github.io/2019/10/30/uml.html" rel="alternate" type="text/html" title="UML과 클래스 다이어그램" /><published>2019-10-30T12:45:13+09:00</published><updated>2019-10-30T12:45:13+09:00</updated><id>https://hayagou.github.io/2019/10/30/uml</id><content type="html" xml:base="https://hayagou.github.io/2019/10/30/uml.html">&lt;h1 id=&quot;디자인패턴-uml&quot;&gt;[디자인패턴] UML&lt;/h1&gt;
+
 &lt;hr /&gt;
 
 &lt;blockquote&gt;
@@ -36,50 +37,57 @@
   &lt;p&gt;요소가 서로 연관되는 방법&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;관계&lt;/th&gt;
-      &lt;th&gt;표시&lt;/th&gt;
-      &lt;th&gt;설명&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;연관관계(association)&lt;/td&gt;
-      &lt;td&gt;&lt;img data-action=&quot;zoom&quot; src=&quot;/img/posts/uml/association.png&quot; alt=&quot;association&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;두 사물간의 의미적  관계, 하나의 요소의 변화는 다른 하나에 영향을 미치는 두가지 사이의 관계&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;일반화  관계(generalization)&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/img/posts/uml/generalization.png&quot; alt=&quot;generalization&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;클래스와 인터페이스 사이에서 상속관계를 설명&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;집약관계(aggregation)&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/img/posts/uml/aggregation.png&quot; alt=&quot;aggregation&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;라이프  타임은  독립적전체, 객체가 없어져도 부분 객체는  없어지지않는다&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;합성  관계(composition)&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/img/posts/uml/composition.png&quot; alt=&quot;composition&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;라이프  타임은  의존적, 전체  객체가  없어지면  부분객체도  없어진다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;의존관계(dependency)&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/img/posts/uml/dependency.png&quot; alt=&quot;dependency&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;연관  관계와  같음, 차이점은  두  클래스의  관계가  한  메서드를  실행하는  동안과  같은, 매우  짧은  시간만  유지된다는  점이다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;실체화  관계(realization)&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/img/posts/uml/realization.png&quot; alt=&quot;realization&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;인터페이스와  클래스  컴포넌트  사이의  관계를  지정&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;div class=&quot;table-responsive table-bordered table-condensed&quot;&gt;
+	&lt;table class=&quot;table&quot;&gt;
+		&lt;tr class=&quot;text-center&quot;&gt;
+			&lt;th&gt;관계&lt;/th&gt;
+			&lt;th&gt;표시&lt;/th&gt;
+			&lt;th&gt;설명&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;연관관계(association)&lt;/td&gt;
+			&lt;td&gt;&lt;img data-action=&quot;zoom&quot; src=&quot;/img/posts/uml/association.png&quot; alt=&quot;association&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
+			&lt;td&gt;두 사물간의 의미적  관계, 하나의 요소의 변화는 다른 하나에 영향을 미치는 두가지 사이의 관계&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;일반화  관계(generalization)&lt;/td&gt;
+			&lt;td&gt;&lt;img src=&quot;/img/posts/uml/generalization.png&quot; alt=&quot;generalization&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
+			&lt;td&gt;클래스와 인터페이스 사이에서 상속관계를 설명&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;집약관계(aggregation)&lt;/td&gt;
+			&lt;td&gt;&lt;img src=&quot;/img/posts/uml/aggregation.png&quot; alt=&quot;aggregation&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
+			&lt;td&gt;라이프  타임은  독립적전체, 객체가 없어져도 부분 객체는  없어지지않는다&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;합성  관계(composition)&lt;/td&gt;
+			&lt;td&gt;&lt;img src=&quot;/img/posts/uml/composition.png&quot; alt=&quot;composition&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
+			&lt;td&gt;라이프  타임은  의존적, 전체  객체가  없어지면  부분객체도  없어진다.&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;의존관계(dependency)&lt;/td&gt;
+			&lt;td&gt;&lt;img src=&quot;/img/posts/uml/dependency.png&quot; alt=&quot;dependency&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
+			&lt;td&gt;연관  관계와  같음, 차이점은  두  클래스의  관계가  한  메서드를  실행하는  동안과  같은, 매우  짧은  시간만  유지된다는  점이다.&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;실체화  관계(realization)&lt;/td&gt;
+			&lt;td&gt;&lt;img src=&quot;/img/posts/uml/realization.png&quot; alt=&quot;realization&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
+			&lt;td&gt;인터페이스와  클래스  컴포넌트  사이의  관계를  지정&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;!-- | 관계 |표시 |설명|
+|--|--|--|
+| 연관관계(association) |  &lt;img data-action=&quot;zoom&quot; src='/img/posts/uml/association.png' alt='association' width=&quot;200&quot; height=&quot;110&quot;&gt;|두 사물간의 의미적  관계, 하나의 요소의 변화는 다른 하나에 영향을 미치는 두가지 사이의 관계 |
+|일반화  관계(generalization)  | &lt;img src=&quot;/img/posts/uml/generalization.png&quot; alt='generalization' width=&quot;200&quot; height=&quot;110&quot;&gt; |클래스와 인터페이스 사이에서 상속관계를 설명 |
+|집약관계(aggregation)|&lt;img src=&quot;/img/posts/uml/aggregation.png&quot; alt='aggregation' width=&quot;200&quot; height=&quot;110&quot;&gt;|라이프  타임은  독립적전체, 객체가 없어져도 부분 객체는  없어지지않는다|
+|합성  관계(composition)|&lt;img src=&quot;/img/posts/uml/composition.png&quot; alt='composition' width=&quot;200&quot; height=&quot;110&quot;&gt;|라이프  타임은  의존적, 전체  객체가  없어지면  부분객체도  없어진다.|
+|의존관계(dependency)|&lt;img src=&quot;/img/posts/uml/dependency.png&quot; alt='dependency' width=&quot;200&quot; height=&quot;110&quot;&gt;|연관  관계와  같음, 차이점은  두  클래스의  관계가  한  메서드를  실행하는  동안과  같은, 매우  짧은  시간만  유지된다는  점이다.|
+|실체화  관계(realization)|&lt;img src=&quot;/img/posts/uml/realization.png&quot; alt='realization' width=&quot;200&quot; height=&quot;110&quot;&gt;|인터페이스와  클래스  컴포넌트  사이의  관계를  지정| --&gt;
 
 &lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">UML UML의 구성 요소 사물(Things) : 기본 요소 관계(Relationship) : 사물 간의 관계 다이어그램(Diagram) : 사물관 관계를 도형으로 표현</summary></entry><entry><title type="html">Grid Option</title><link href="https://hayagou.github.io/2019/10/30/grid_optoin.html" rel="alternate" type="text/html" title="Grid Option" /><published>2019-10-30T12:45:13+09:00</published><updated>2019-10-30T12:45:13+09:00</updated><id>https://hayagou.github.io/2019/10/30/grid_optoin</id><content type="html" xml:base="https://hayagou.github.io/2019/10/30/grid_optoin.html">&lt;h1 id=&quot;부트스트랩-grid-options--offset-nesting-ordering&quot;&gt;[부트스트랩] Grid options : offset, nesting, ordering&lt;/h1&gt;
+&lt;br /&gt;&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] UML</summary></entry><entry><title type="html">Grid Option</title><link href="https://hayagou.github.io/2019/10/30/grid_optoin.html" rel="alternate" type="text/html" title="Grid Option" /><published>2019-10-30T08:45:13+09:00</published><updated>2019-10-30T08:45:13+09:00</updated><id>https://hayagou.github.io/2019/10/30/grid_optoin</id><content type="html" xml:base="https://hayagou.github.io/2019/10/30/grid_optoin.html">&lt;h1 id=&quot;부트스트랩-grid-options--offset-nesting-ordering&quot;&gt;[부트스트랩] Grid options : offset, nesting, ordering&lt;/h1&gt;
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;strong&gt;디바이스 사이즈&lt;/strong&gt;&lt;/p&gt;
@@ -145,4 +153,100 @@ col-*-pull-*  //왼쪽으로 밀어냄
 
 &lt;p&gt;요소들의 순서를 바꾸어 줌&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">[부트스트랩] Grid options : offset, nesting, ordering</summary></entry></feed>
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">[부트스트랩] Grid options : offset, nesting, ordering</summary></entry><entry><title type="html">Button</title><link href="https://hayagou.github.io/2019/10/30/button.html" rel="alternate" type="text/html" title="Button" /><published>2019-10-30T08:45:13+09:00</published><updated>2019-10-30T08:45:13+09:00</updated><id>https://hayagou.github.io/2019/10/30/button</id><content type="html" xml:base="https://hayagou.github.io/2019/10/30/button.html">&lt;p&gt;#[부트스트랩] 버튼 스타일&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">#[부트스트랩] 버튼 스타일</summary></entry><entry><title type="html">Image</title><link href="https://hayagou.github.io/2019/10/30/img.html" rel="alternate" type="text/html" title="Image" /><published>2019-10-30T08:45:13+09:00</published><updated>2019-10-30T08:45:13+09:00</updated><id>https://hayagou.github.io/2019/10/30/img</id><content type="html" xml:base="https://hayagou.github.io/2019/10/30/img.html">&lt;p&gt;#[부트스트랩] 이미지 스타일&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">#[부트스트랩] 이미지 스타일</summary></entry><entry><title type="html">Table and Form</title><link href="https://hayagou.github.io/2011/01/02/table_form.html" rel="alternate" type="text/html" title="Table and Form" /><published>2011-01-02T08:45:13+09:00</published><updated>2011-01-02T08:45:13+09:00</updated><id>https://hayagou.github.io/2011/01/02/table_form</id><content type="html" xml:base="https://hayagou.github.io/2011/01/02/table_form.html">&lt;h1 id=&quot;부트스트랩-테이블과-폼-태그-스타일&quot;&gt;[부트스트랩] 테이블과 폼 태그 스타일&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tr 	//table row, 가로 
+td 	//table data, 세로
+th 	//table header
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;그리드 레이아웃의 row 를 그대로 적용해서 네이밍 한것
+“td” 가 table col이 아니고 table data인 이유는 데이터가 들어가는 부분이라서&lt;/p&gt;
+
+&lt;h2 id=&quot;table-class들&quot;&gt;Table Class들&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;table class=&quot;table&quot;&amp;gt;
+  ...
+&amp;lt;/table&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;table.table&lt;/strong&gt; : 약간의 패딩과 수평 구분선&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;table.table-striped&lt;/strong&gt; : 줄무늬 행&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;table.table-striped&lt;/strong&gt; : 선있는 테이블&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;table.table-hover&lt;/strong&gt; : 행 hover, 마우스올리면 불들어옴&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;table.table-condensed&lt;/strong&gt; : 좁은폭 테이블&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;table-row에-효과를-넣고-싶을&quot;&gt;Table Row에 효과를 넣고 싶을&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;table-responsive&quot;&gt;
+    &lt;table class=&quot;table table-bordered table-striped&quot;&gt;
+      &lt;colgroup&gt;
+        &lt;col class=&quot;col-xs-1&quot; /&gt;
+        &lt;col class=&quot;col-xs-7&quot; /&gt;
+      &lt;/colgroup&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;클래스&lt;/th&gt;
+          &lt;th&gt;설명&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;row&quot;&gt;
+            &lt;code&gt;.active&lt;/code&gt;
+          &lt;/th&gt;
+          &lt;td&gt;특정한 행이나 셀에 hover 했을 때와 같은 색을 입힙니다.&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;row&quot;&gt;
+            &lt;code&gt;.success&lt;/code&gt;
+          &lt;/th&gt;
+          &lt;td&gt;성공적이거나 긍정적인 액션을 의미합니다.&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;row&quot;&gt;
+            &lt;code&gt;.info&lt;/code&gt;
+          &lt;/th&gt;
+          &lt;td&gt;중립적인 정보의 변화나 액션을 의미합니다.&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;row&quot;&gt;
+            &lt;code&gt;.warning&lt;/code&gt;
+          &lt;/th&gt;
+          &lt;td&gt;주의가 필요한 경고를 의미합니다.&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;row&quot;&gt;
+            &lt;code&gt;.danger&lt;/code&gt;
+          &lt;/th&gt;
+          &lt;td&gt;위험하거나 부정적일수 있는 액션을 의미합니다. &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;!-- On rows --&amp;gt;
+&amp;lt;tr class=&quot;active&quot;&amp;gt;...&amp;lt;/tr&amp;gt;
+&amp;lt;tr class=&quot;success&quot;&amp;gt;...&amp;lt;/tr&amp;gt;
+&amp;lt;tr class=&quot;warning&quot;&amp;gt;...&amp;lt;/tr&amp;gt;
+&amp;lt;tr class=&quot;danger&quot;&amp;gt;...&amp;lt;/tr&amp;gt;
+&amp;lt;tr class=&quot;info&quot;&amp;gt;...&amp;lt;/tr&amp;gt;
+
+&amp;lt;!-- On cells (`td` or `th`) --&amp;gt;
+&amp;lt;tr&amp;gt;
+  &amp;lt;td class=&quot;active&quot;&amp;gt;...&amp;lt;/td&amp;gt;
+  &amp;lt;td class=&quot;success&quot;&amp;gt;...&amp;lt;/td&amp;gt;
+  &amp;lt;td class=&quot;warning&quot;&amp;gt;...&amp;lt;/td&amp;gt;
+  &amp;lt;td class=&quot;danger&quot;&amp;gt;...&amp;lt;/td&amp;gt;
+  &amp;lt;td class=&quot;info&quot;&amp;gt;...&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>hayagou</name></author><summary type="html">[부트스트랩] 테이블과 폼 태그 스타일</summary></entry></feed>
