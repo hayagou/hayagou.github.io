@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://hayagou.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hayagou.github.io/" rel="alternate" type="text/html" /><updated>2020-02-09T19:03:45+09:00</updated><id>https://hayagou.github.io/feed.xml</id><title type="html">Hayagou</title><author><name>hayagou</name></author><entry><title type="html">UML과 클래스 다이어그램</title><link href="https://hayagou.github.io/2019/10/30/uml.html" rel="alternate" type="text/html" title="UML과 클래스 다이어그램" /><published>2019-10-30T12:45:13+09:00</published><updated>2019-10-30T12:45:13+09:00</updated><id>https://hayagou.github.io/2019/10/30/uml</id><content type="html" xml:base="https://hayagou.github.io/2019/10/30/uml.html">&lt;h1 id=&quot;디자인패턴-uml&quot;&gt;[디자인패턴] UML&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://hayagou.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hayagou.github.io/" rel="alternate" type="text/html" /><updated>2020-02-11T19:00:56+09:00</updated><id>https://hayagou.github.io/feed.xml</id><title type="html">Hayagou</title><author><name>hayagou</name></author><entry><title type="html">UML과 클래스 다이어그램</title><link href="https://hayagou.github.io/2019/10/30/uml.html" rel="alternate" type="text/html" title="UML과 클래스 다이어그램" /><published>2019-10-30T12:45:13+09:00</published><updated>2019-10-30T12:45:13+09:00</updated><id>https://hayagou.github.io/2019/10/30/uml</id><content type="html" xml:base="https://hayagou.github.io/2019/10/30/uml.html">&lt;h1 id=&quot;디자인패턴-uml&quot;&gt;[디자인패턴] UML&lt;/h1&gt;
 
 &lt;hr /&gt;
 
@@ -249,4 +249,25 @@ th 	//table header
   &amp;lt;td class=&quot;danger&quot;&amp;gt;...&amp;lt;/td&amp;gt;
   &amp;lt;td class=&quot;info&quot;&amp;gt;...&amp;lt;/td&amp;gt;
 &amp;lt;/tr&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>hayagou</name></author><summary type="html">[부트스트랩] 테이블과 폼 태그 스타일</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;폼태그-스타일&quot;&gt;폼태그 스타일&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;form.form-inline
+	div.form-group.has-success.has-feedback
+		div.input-group
+			span.input-group-addon
+				span.glyphicon glyphicon-*(들어가 이미지 명)
+			input.form-control
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;form-inline&lt;/strong&gt; : 폼의 요소들을 한줄로 정
+&lt;strong&gt;form-horizontal&lt;/strong&gt; : 폼의 요소들을 수평으로 정렬
+&lt;strong&gt;form-group&lt;/strong&gt; : form태그 안의 최적의 여백을 위해
+&lt;strong&gt;input-control&lt;/strong&gt; : 조작하고싶은 요소
+&lt;strong&gt;control-label&lt;/strong&gt; : 레이블테그가 form-group이 가지고있는 스타일을 따라
+&lt;strong&gt;has-스타일이름&lt;/strong&gt; : 입력창에 스타일을 줌
+&lt;strong&gt;input-group&lt;/strong&gt; : 인풋 테그 스타일을 줌
+&lt;strong&gt;input-group-addon&lt;/strong&gt; : 인풋 태그에 보조아이콘 추가&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">[부트스트랩] 테이블과 폼 태그 스타일</summary></entry></feed>
