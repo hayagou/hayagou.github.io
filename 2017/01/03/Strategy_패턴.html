@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    Button - Hayagou
+    Strategy 패턴 - Hayagou
     
   </title>
 
-  <meta name="description" content="#[부트스트랩] 버튼 스타일">
+  <meta name="description" content="[디자인패턴] Strategy 패턴">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="https://hayagou.github.io/2019/10/30/button.html">
+  <link rel="canonical" href="https://hayagou.github.io/2017/01/03/Strategy_%ED%8C%A8%ED%84%B4.html">
   <link rel="alternate" type="application/rss+xml" title="Hayagou" href="/feed.xml">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -75,11 +75,11 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>Button</h1>
+            <h1>Strategy 패턴</h1>
             
             <span class="meta">Posted by
               <a href="#">hayagou</a>
-              on 2019-10-30 &middot; <span class="reading-time" title="Estimated read time">
+              on 2017-01-03 &middot; <span class="reading-time" title="Estimated read time">
   
    1 min  read </span>
 
@@ -94,15 +94,45 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
-        <p>#[부트스트랩] 버튼 스타일</p>
+        <h1 id="디자인패턴-strategy-패턴">[디자인패턴] Strategy 패턴</h1>
+<hr />
 
-<div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto">
-	<table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0">
-		<tr>
-			<td style="padding:6px;border-right:2px solid #4f4f4f">
-				<div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#0086b3">#include</span>&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>iostream<span style="color:#aaffaa"></span><span style="color:#ff3399">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">int</span>&nbsp;main()</div><div style="padding:0 6px; white-space:pre; line-height:130%">{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">cout</span>&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>&nbsp;<span style="color:#ffd500">"hello,&nbsp;world"</span>&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>&nbsp;<span style="color:#4be6fa">endl</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr>
-	</table>
+<ul>
+  <li>
+    <p><strong>행위</strong>  <strong>클래스로</strong>  <strong>캡슐화해</strong>  동적으로  행위를  자유롭게  바꿀  수  있게  해주는  패턴</p>
+  </li>
+  <li>
+    <p>같은  문제를  해결하는  여러  알고리즘이  클래스별로  캡슐화되어  있고  이들이  필요할  때  교체  할  수  있도록  함으로써  동일한  문제를  다른  알고리즘으로  해결할  수  있게  하는  디자인패턴</p>
+  </li>
+  <li>
+    <p><strong>전략을</strong>  <strong>쉽게</strong>  <strong>바꿀</strong>  <strong>수</strong>  <strong>있도록</strong>  해주는  디자인  패턴이다</p>
+  </li>
+  <li>
+    <p>전략이란? 어떤  목적을  달성하기  위해  일을  수행하는  방식, 비즈니스  규칙, 문제를  해결하는  알고리즘등</p>
+  </li>
+</ul>
+
+<div class="container">
+<img src="/img/posts/ds/strategy.png" alt="strategy패턴" class="img-responsive center-block" />
 </div>
+
+<h2 id="행동--추가--하기">행동  추가  하기</h2>
+
+<ol>
+  <li>상속을  통한  행동  확장<br />
+(문제점)
+    <ul>
+      <li>각 subclass에서  원하지  않는  결과가  발생하는  지를  검사해야함- 여러 subclass가  변경될  수  있음</li>
+    </ul>
+  </li>
+  <li>Composition을  사용한  해결</li>
+  <li>Polymorphic Composition을  통한  클래스의  확장
+    <ol>
+      <li>클래스에서  변경  가능한  부분을  분리하고  추상화함</li>
+      <li>분리한  부분을  구성을  사용하여  통합함</li>
+    </ol>
+  </li>
+</ol>
 
 
         <hr>
@@ -123,9 +153,12 @@
         <div class="clearfix">
 
           
-          <a class="btn btn-primary float-left" href="/2019/10/30/grid_optoin.html" data-toggle="tooltip" data-placement="top" title="Grid Option">&larr; Previous<span class="d-none d-md-inline">
+          <a class="btn btn-primary float-left" href="/2017/01/02/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4%EC%A2%85%EB%A5%98.html" data-toggle="tooltip" data-placement="top" title="디자인패턴 종류">&larr; Previous<span class="d-none d-md-inline">
               Post</span></a>
           
+          
+          <a class="btn btn-primary float-right" href="/2017/01/04/Observer_%ED%8C%A8%ED%84%B4.html" data-toggle="tooltip" data-placement="top" title="Observer 패턴">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
           
 
         </div>

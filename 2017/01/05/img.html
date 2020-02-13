@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    Button - Hayagou
+    Composite Pattern - Hayagou
     
   </title>
 
-  <meta name="description" content="#[부트스트랩] 버튼 스타일">
+  <meta name="description" content="[디자인패턴] Composite Pattern">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="https://hayagou.github.io/2019/10/30/button.html">
+  <link rel="canonical" href="https://hayagou.github.io/2017/01/05/img.html">
   <link rel="alternate" type="application/rss+xml" title="Hayagou" href="/feed.xml">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -75,11 +75,11 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>Button</h1>
+            <h1>Composite Pattern</h1>
             
             <span class="meta">Posted by
               <a href="#">hayagou</a>
-              on 2019-10-30 &middot; <span class="reading-time" title="Estimated read time">
+              on 2017-01-05 &middot; <span class="reading-time" title="Estimated read time">
   
    1 min  read </span>
 
@@ -94,15 +94,31 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
-        <p>#[부트스트랩] 버튼 스타일</p>
+        <h1 id="디자인패턴-composite-pattern">[디자인패턴] Composite Pattern</h1>
 
-<div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto">
-	<table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0">
-		<tr>
-			<td style="padding:6px;border-right:2px solid #4f4f4f">
-				<div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#0086b3">#include</span>&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>iostream<span style="color:#aaffaa"></span><span style="color:#ff3399">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">int</span>&nbsp;main()</div><div style="padding:0 6px; white-space:pre; line-height:130%">{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">cout</span>&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>&nbsp;<span style="color:#ffd500">"hello,&nbsp;world"</span>&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>&nbsp;<span style="color:#4be6fa">endl</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr>
-	</table>
-</div>
+<blockquote>
+  <p>여러  개의  객체들로  구성된  복합  객체와  단일  객체를  클라이언트에서  구별  없이  다루게  해주는  패턴</p>
+</blockquote>
+
+<ul>
+  <li><strong>전체</strong>-<strong>부분의</strong>  <strong>관계</strong>(Ex. Directory-File)<strong>를</strong>  <strong>갖는</strong>  <strong>객체</strong>들  사이의  관계를  정의할  때  유용하다.</li>
+  <li>클라이언트는  전체와  부분을  구분하지  않고  동일한  <strong>인터페이스</strong>를  사용할  수  있다.</li>
+</ul>
+
+<p><img src="/img/posts/ds/composite.png" alt="Composite" class="img-responsive center-block" /></p>
+
+<ul>
+  <li>
+    <p>역할이  수행하는  작업</p>
+
+    <ul>
+      <li>Componet : 구체적인  부분, 즉 Leaf 클래스와  전체에  해당하는 Composite 클래스에  공통  인터페이스를  정의</li>
+      <li>Leaf : 구체적인  부분  클래스, 즉 Leaf 클래스와  전체에  해당하는 Composite 클래스에  공통  인터페이스를  정의</li>
+      <li>Composite : 전체  클래스, 복수  개의 Component를  갖도록  정의, 그러므로  복수  개의 Leaf, 심지어  복수  개의 Composite 객체를  부분으로  가질  수  있음</li>
+    </ul>
+  </li>
+</ul>
+
 
 
         <hr>
@@ -123,9 +139,12 @@
         <div class="clearfix">
 
           
-          <a class="btn btn-primary float-left" href="/2019/10/30/grid_optoin.html" data-toggle="tooltip" data-placement="top" title="Grid Option">&larr; Previous<span class="d-none d-md-inline">
+          <a class="btn btn-primary float-left" href="/2017/01/04/Observer_%ED%8C%A8%ED%84%B4.html" data-toggle="tooltip" data-placement="top" title="Observer 패턴">&larr; Previous<span class="d-none d-md-inline">
               Post</span></a>
           
+          
+          <a class="btn btn-primary float-right" href="/2019/10/30/grid_optoin.html" data-toggle="tooltip" data-placement="top" title="Grid Option">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
           
 
         </div>
