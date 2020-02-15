@@ -1,392 +1,288 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://hayagou.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hayagou.github.io/" rel="alternate" type="text/html" /><updated>2020-02-13T09:06:04+09:00</updated><id>https://hayagou.github.io/feed.xml</id><title type="html">Hayagou</title><author><name>hayagou</name></author><entry><title type="html">Grid Option</title><link href="https://hayagou.github.io/2019/10/30/grid_optoin.html" rel="alternate" type="text/html" title="Grid Option" /><published>2019-10-30T08:45:13+09:00</published><updated>2019-10-30T08:45:13+09:00</updated><id>https://hayagou.github.io/2019/10/30/grid_optoin</id><content type="html" xml:base="https://hayagou.github.io/2019/10/30/grid_optoin.html">&lt;h1 id=&quot;부트스트랩-grid-options--offset-nesting-ordering&quot;&gt;[부트스트랩] Grid options : offset, nesting, ordering&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://hayagou.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hayagou.github.io/" rel="alternate" type="text/html" /><updated>2020-02-15T17:17:26+09:00</updated><id>https://hayagou.github.io/feed.xml</id><title type="html">Hayagou</title><author><name>hayagou</name></author><entry><title type="html">Command Pattern</title><link href="https://hayagou.github.io/2017/01/16/command.html" rel="alternate" type="text/html" title="Command Pattern" /><published>2017-01-16T08:45:13+09:00</published><updated>2017-01-16T08:45:13+09:00</updated><id>https://hayagou.github.io/2017/01/16/command</id><content type="html" xml:base="https://hayagou.github.io/2017/01/16/command.html">&lt;h1 id=&quot;디자인패턴-comand-pattern&quot;&gt;[디자인패턴] Comand Pattern&lt;/h1&gt;
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;strong&gt;디바이스 사이즈&lt;/strong&gt;&lt;/p&gt;
-
+&lt;h2 id=&quot;의도&quot;&gt;의도&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;xs : 스마트폰 사이즈&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;sm : 태블릿 사이즈&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;md : 데스크탑 사이즈&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;lg : 큰 모니터 사이즈&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;요청 자체를 캡슐화하는 것, 이를 통해 요청이 서로 다른 사용자를 매개변수로 만들고, 요청을 대기시키거나 로깅하며, 되돌릴 수 있는 연산을 지원&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;offset&quot;&gt;offset&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/ds/command.png&quot; alt=&quot;Command 패턴&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] Comand Pattern</summary></entry><entry><title type="html">Iterator Pattern</title><link href="https://hayagou.github.io/2017/01/15/iterator.html" rel="alternate" type="text/html" title="Iterator Pattern" /><published>2017-01-15T08:45:13+09:00</published><updated>2017-01-15T08:45:13+09:00</updated><id>https://hayagou.github.io/2017/01/15/iterator</id><content type="html" xml:base="https://hayagou.github.io/2017/01/15/iterator.html">&lt;h1 id=&quot;디자인패턴-iterator-pattern&quot;&gt;[디자인패턴] Iterator Pattern&lt;/h1&gt;
 &lt;hr /&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-col-*-offset-*
+&lt;h2 id=&quot;의도&quot;&gt;의도&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;내부 표현부를 노출하지 않고 어떤 객체 집합에 속한 원소들을 순차적으로 접근할 수 있는 방법을 제공하는 패턴&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;활용성&quot;&gt;활용성&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;객체 내부 표현 방식을 모르고도 집합 객체의 각 원소들에 접근하고 싶을 때&lt;/li&gt;
+  &lt;li&gt;집합 객체를 순회하는 다양한 방법을 지원하고 싶을 때&lt;/li&gt;
+  &lt;li&gt;서로 다른 집합 객체 구조에 대해서도 동일한 방법으로 순회하고 싶을 때&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;요소를 옮기고 싶을때 사용&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/ds/iterator.png&quot; alt=&quot;iterator 패턴&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] Iterator Pattern</summary></entry><entry><title type="html">Proxy Pattern</title><link href="https://hayagou.github.io/2017/01/14/proxy.html" rel="alternate" type="text/html" title="Proxy Pattern" /><published>2017-01-14T08:45:13+09:00</published><updated>2017-01-14T08:45:13+09:00</updated><id>https://hayagou.github.io/2017/01/14/proxy</id><content type="html" xml:base="https://hayagou.github.io/2017/01/14/proxy.html">&lt;h1 id=&quot;디자인패턴-proxy-pattern&quot;&gt;[디자인패턴] Proxy Pattern&lt;/h1&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;의도&quot;&gt;의도&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;다른 객체에 대한 접근을 제어하기 위한 대리자 또는 자리채움자 역할을 하는 객체를 둠
+= 실제 기능을 수행하는 객체Real Object 대신 가상의 객체Proxy Object를 사용해 로직의 흐름을 제어하는 디자인패턴&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h2 id=&quot;nesting&quot;&gt;nesting&lt;/h2&gt;
+&lt;h2 id=&quot;특징&quot;&gt;특징&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;원래 하려던 기능을 수행하며 그외의 부가적인 작업(로깅, 인증, 네트워크 통신 등)을 수행하기에 좋음&lt;/li&gt;
+  &lt;li&gt;비용이 많이 드는 연산(DB 쿼리, 대용량 텍스트 파일 등)을 실제로 필요한 시점에 수행할 수 있음&lt;/li&gt;
+  &lt;li&gt;사용자 입장에서는 프록시 객체나 실제 객체나 사용법은 유사하므로 사용성이 좋음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ds/proxy.png&quot; alt=&quot;proxy 패턴&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;활용성&quot;&gt;활용성&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;원격지 프록시(remote proxy)&lt;/li&gt;
+  &lt;li&gt;가상 프록시(virtual proxy) : 요청이 있을 때만 필요한 고비용 객체를 생성, ex&amp;gt;ImageProxy&lt;/li&gt;
+  &lt;li&gt;보호용 프록시(protection proxy):원래 객체에 대한 실제 접근을 제어함,객체별로 접근 제어 권한이 다를 때 유용&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] Proxy Pattern</summary></entry><entry><title type="html">State Pattern</title><link href="https://hayagou.github.io/2017/01/13/state.html" rel="alternate" type="text/html" title="State Pattern" /><published>2017-01-13T08:45:13+09:00</published><updated>2017-01-13T08:45:13+09:00</updated><id>https://hayagou.github.io/2017/01/13/state</id><content type="html" xml:base="https://hayagou.github.io/2017/01/13/state.html">&lt;h1 id=&quot;디자인패턴-state-pattern&quot;&gt;[디자인패턴] State Pattern&lt;/h1&gt;
 
 &lt;hr /&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-.container
-    .row
-	 .col-md-*
-		row               //row가 두개 이상들어갈수 있다.
-			.col-md-*
-			.col-md-*
-		row
-			.col-md-*
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;요소들을 묶을때 사용, 중첩 구문&lt;/p&gt;
-
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;ordering&quot;&gt;ordering&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-col-*-push-*  //오른쪽으로 밀어냄
-
-col-*-pull-*  //왼쪽으로 밀어냄
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;요소들의 순서를 바꾸어 줌&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">[부트스트랩] Grid options : offset, nesting, ordering</summary></entry><entry><title type="html">Button</title><link href="https://hayagou.github.io/2019/10/30/button.html" rel="alternate" type="text/html" title="Button" /><published>2019-10-30T08:45:13+09:00</published><updated>2019-10-30T08:45:13+09:00</updated><id>https://hayagou.github.io/2019/10/30/button</id><content type="html" xml:base="https://hayagou.github.io/2019/10/30/button.html">&lt;p&gt;#[부트스트랩] 버튼 스타일&lt;/p&gt;
-
-&lt;div class=&quot;colorscripter-code&quot; style=&quot;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto&quot;&gt;
-	&lt;table class=&quot;colorscripter-code-table&quot; style=&quot;margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
-		&lt;tr&gt;
-			&lt;td style=&quot;padding:6px;border-right:2px solid #4f4f4f&quot;&gt;
-				&lt;div style=&quot;margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%&quot;&gt;&lt;div style=&quot;line-height:130%&quot;&gt;1&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;2&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;3&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;4&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;5&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;6&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;td style=&quot;padding:6px 0;text-align:left&quot;&gt;&lt;div style=&quot;margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%&quot;&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#0086b3&quot;&gt;#include&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#aaffaa&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color:#ff3399&quot;&gt;&amp;lt;&lt;/span&gt;iostream&lt;span style=&quot;color:#aaffaa&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color:#ff3399&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#4be6fa&quot;&gt;int&lt;/span&gt;&amp;nbsp;main()&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;{&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#4be6fa&quot;&gt;cout&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#aaffaa&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color:#ff3399&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&quot;color:#aaffaa&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color:#ff3399&quot;&gt;&amp;lt;&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#ffd500&quot;&gt;&quot;hello,&amp;nbsp;world&quot;&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#aaffaa&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color:#ff3399&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&quot;color:#aaffaa&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color:#ff3399&quot;&gt;&amp;lt;&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#4be6fa&quot;&gt;endl&lt;/span&gt;;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;}&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic&quot;&gt;&lt;/div&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align:bottom;padding:0 2px 4px 0&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
-	&lt;/table&gt;
-&lt;/div&gt;</content><author><name>hayagou</name></author><summary type="html">#[부트스트랩] 버튼 스타일</summary></entry><entry><title type="html">Composite Pattern</title><link href="https://hayagou.github.io/2017/01/05/img.html" rel="alternate" type="text/html" title="Composite Pattern" /><published>2017-01-05T08:45:13+09:00</published><updated>2017-01-05T08:45:13+09:00</updated><id>https://hayagou.github.io/2017/01/05/img</id><content type="html" xml:base="https://hayagou.github.io/2017/01/05/img.html">&lt;h1 id=&quot;디자인패턴-composite-pattern&quot;&gt;[디자인패턴] Composite Pattern&lt;/h1&gt;
+&lt;h3 id=&quot;의도&quot;&gt;의도&lt;/h3&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;여러  개의  객체들로  구성된  복합  객체와  단일  객체를  클라이언트에서  구별  없이  다루게  해주는  패턴&lt;/p&gt;
+  &lt;p&gt;객체의  내부  상태에  따라  스스로  행동을  변경할  수  있게끔  허가하는  패턴으로, 이렇게  하면  객체는  마치
+자신의  클래스를  바꾸는  것처럼  보임&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;전체&lt;/strong&gt;-&lt;strong&gt;부분의&lt;/strong&gt;  &lt;strong&gt;관계&lt;/strong&gt;(Ex. Directory-File)&lt;strong&gt;를&lt;/strong&gt;  &lt;strong&gt;갖는&lt;/strong&gt;  &lt;strong&gt;객체&lt;/strong&gt;들  사이의  관계를  정의할  때  유용하다.&lt;/li&gt;
-  &lt;li&gt;클라이언트는  전체와  부분을  구분하지  않고  동일한  &lt;strong&gt;인터페이스&lt;/strong&gt;를  사용할  수  있다.&lt;/li&gt;
+  &lt;li&gt;유한상태객체(FSM, Context)로  부터  상태를  분리하고  행동을  상태에게  위임함&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/ds/composite.png&quot; alt=&quot;Composite&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;활용성&quot;&gt;활용성&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;객체의  행동이  상태에  따라  달라지고, 런타임에  행동이  바뀔때&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;객체의  상태에  따라  달라지는  다중  분기  조건  처리가  맣이  들어  있을  때&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ds/state.png&quot; alt=&quot;state 패턴&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;(cf) Strategy Pattern - class diagram이  동일함&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[전략  패턴] client가 context의  행동(strategy)을  설정(변경)함, (용도) context의  유연한  행동  변경&lt;/p&gt;
+
+&lt;p&gt;[상태  패턴] context 자신이  상태  변경을  통해  행동을  변경함, (용도) (context의) case analysis의  대안&lt;/p&gt;
+
+&lt;h2 id=&quot;state-pattern-참고&quot;&gt;State Pattern 참고&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Finite State Machine(FSM)&lt;/p&gt;
+
+&lt;h3 id=&quot;basic-concepts&quot;&gt;Basic concepts&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;한  순간  오직  하나의  상태를  가짐&lt;/li&gt;
+  &lt;li&gt;한  상태에서  다른  상태로  전이  될  수  있음&lt;/li&gt;
+  &lt;li&gt;상태전이는  외부입력(사건,행동)에  의해  야기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mealy macine -&amp;gt; 6-tuple(상태집합, 초기상태, 유한입력집합, 유한출력집합, 전이함수, 출력함수)&lt;/p&gt;
+
+&lt;p&gt;Moore machine -&amp;gt; 출력함수: 상태집합 -&amp;gt; 출력집합(출력은  오직  현재  상태에만  의존함)&lt;/p&gt;
+
+&lt;p&gt;사건 event - 시스테멩  영향을  주는  것(타입)&lt;/p&gt;
+
+&lt;p&gt;상태  변수 state variable - 상태를  나타내느  변수, 두  종류가  있음&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Enumeratable state variable) 질적qualitative 상태 ex&amp;gt; 열거형&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Extended state variable) 양적quantitative 상태 ex&amp;gt;int&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Problem) 상태변수의  변경이  항상 state transition을  야기한다면 state explosion&lt;/li&gt;
+  &lt;li&gt;Solution) 가드  조건 - 확장된  상태변수와  사건  파라미터로  이루어진 boolean expression&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;가드는  확장된  상태변수의 state explosion을  방지할  수  있다&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;상태  전이 state transition : 상태 x 행동 x 가드 -&amp;gt; 상태&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] State Pattern</summary></entry><entry><title type="html">Template Method Pattern</title><link href="https://hayagou.github.io/2017/01/12/template_method.html" rel="alternate" type="text/html" title="Template Method Pattern" /><published>2017-01-12T08:45:13+09:00</published><updated>2017-01-12T08:45:13+09:00</updated><id>https://hayagou.github.io/2017/01/12/template_method</id><content type="html" xml:base="https://hayagou.github.io/2017/01/12/template_method.html">&lt;h1 id=&quot;디자인패턴-template-method-pattern&quot;&gt;[디자인패턴] Template Method Pattern&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;어떤  작업을  처리하는  일부분을  서브  클래스로  캡슐화해  전체  일을  수행하는  구조는  바꾸지  않으면서  특정단계에서  수행하는  내역을  바꾸는  패턴&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;즉, &lt;strong&gt;전체적으로는&lt;/strong&gt;  &lt;strong&gt;동일하면서&lt;/strong&gt;  &lt;strong&gt;부분적으로는&lt;/strong&gt;  &lt;strong&gt;다른&lt;/strong&gt;  &lt;strong&gt;구문으로&lt;/strong&gt;  &lt;strong&gt;구성된&lt;/strong&gt;  &lt;strong&gt;메서드의&lt;/strong&gt;  &lt;strong&gt;코드&lt;/strong&gt;  &lt;strong&gt;중복을&lt;/strong&gt;  &lt;strong&gt;최소화&lt;/strong&gt;  할  때  유용하다.&lt;/li&gt;
+  &lt;li&gt;다른  관점에서  보면  동일한  기능을  상위  클래스에서  정의하면서  확장/변화가  필요한  부분만  서브  클래스에서  구현할  수  있도록  한다.&lt;/li&gt;
+  &lt;li&gt;예를  들어, 전체적인  알고리즘은  상위  클래스에서  구현하면서  다른  부분은  하위  클래스에서  구현할  수  있도록  함으로써  전체적인  알고리즘  코드를  재사용하는  데  유용하도록  한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ds/template_mathod.png&quot; alt=&quot;template_mathod 패턴&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;역할이--수행하는--작업&quot;&gt;역할이  수행하는  작업&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;AbstractClass : 템플릿  메서드를  정의하는  클래스, 하위  클래스에  공통  알고리즘을  정의하고  하위  클래스에서  구현될  기능을 primitive 메서드  또는 hook 메서드로  정의하는  클래스&lt;/li&gt;
+  &lt;li&gt;ConcreteClass : 물려받은 primitive 메서드  또는 hook 메서드를  구현하는  클래스 ,상위  클래스에  구현된  템플릿  메서드의  일반적인  알고리즘에서  하위  클래스에  적합하게 primitive 메서드나 hook 메서드를  오버라이드하는  클래스&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] Template Method Pattern</summary></entry><entry><title type="html">Facade Pattern</title><link href="https://hayagou.github.io/2017/01/11/facade.html" rel="alternate" type="text/html" title="Facade Pattern" /><published>2017-01-11T08:45:13+09:00</published><updated>2017-01-11T08:45:13+09:00</updated><id>https://hayagou.github.io/2017/01/11/facade</id><content type="html" xml:base="https://hayagou.github.io/2017/01/11/facade.html">&lt;h1 id=&quot;디자인패턴-facade-pattern&quot;&gt;[디자인패턴] Facade Pattern&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;어떤 서브시스템의 일련의 인터페이스에 대한 통합된 인터페이스를 제공한다.&lt;/li&gt;
+  &lt;li&gt;퍼사드에서 고수준 인터페이스를 정의하기 때문에 서브시스템을 더 쉽게 사용할수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ds/facade.png&quot; alt=&quot;facade 패턴&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ds/facade1.png&quot; alt=&quot;facade 패턴&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] Facade Pattern</summary></entry><entry><title type="html">Adapter Pattern</title><link href="https://hayagou.github.io/2017/01/10/adaptor.html" rel="alternate" type="text/html" title="Adapter Pattern" /><published>2017-01-10T08:45:13+09:00</published><updated>2017-01-10T08:45:13+09:00</updated><id>https://hayagou.github.io/2017/01/10/adaptor</id><content type="html" xml:base="https://hayagou.github.io/2017/01/10/adaptor.html">&lt;h1 id=&quot;디자인패턴-adapter-pattern&quot;&gt;[디자인패턴] Adapter Pattern&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;adapter pattern은 관계가 없는 인터페이스들이 같이 일할 수 있도록 도와주는 디자인 패턴이다.&lt;/li&gt;
+  &lt;li&gt;2가지 방법 : OBJECT adapter pattern (구성),  CLASS adapter pattern(다중 상속)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ds/adapter.png&quot; alt=&quot;adapter 패턴&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ds/adapter1.png&quot; alt=&quot;adapter 패턴&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] Adapter Pattern</summary></entry><entry><title type="html">Abstract Factory Pattern</title><link href="https://hayagou.github.io/2017/01/09/abstract_factory.html" rel="alternate" type="text/html" title="Abstract Factory Pattern" /><published>2017-01-09T08:45:13+09:00</published><updated>2017-01-09T08:45:13+09:00</updated><id>https://hayagou.github.io/2017/01/09/abstract_factory</id><content type="html" xml:base="https://hayagou.github.io/2017/01/09/abstract_factory.html">&lt;h1 id=&quot;디자인패턴-abstract-factory-pattern&quot;&gt;[디자인패턴] Abstract Factory Pattern&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;구체적인  클래스에  의존하지  않고  서로  연관되거나  의존적인  객체들의  조합을  만드는  인터페이스를  제공하는 패턴&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;즉, 관련성  있는  여러  종류의  객체를  일관된  방식으로  생성하는  경우에  유용하다.&lt;/li&gt;
+  &lt;li&gt;싱글턴  패턴, 팩토리  메서드  패턴을  사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ds/abstract_factory.png&quot; alt=&quot;abstract_factory&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;역할이--수행하는--작업&quot;&gt;역할이  수행하는  작업&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;AbstractFactory : 실제  팩토리  클래스의  공통  인터페이스&lt;/li&gt;
+  &lt;li&gt;ConcreteFactory : 구체적인  팩토리  클래스로 AbstractFactory 클래스의  추상  메서드를  오버라이드함으로써  구체적인  제품을  생성한다.&lt;/li&gt;
+  &lt;li&gt;AbstractProduct : 제품의  공통  인터페이스&lt;/li&gt;
+  &lt;li&gt;ConcreteProduct : 구체적인  팩토리  클래스에서  생성되는  구체적인  제품&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] Abstract Factory Pattern</summary></entry><entry><title type="html">Factory Method Pattern</title><link href="https://hayagou.github.io/2017/01/08/factory.html" rel="alternate" type="text/html" title="Factory Method Pattern" /><published>2017-01-08T08:45:13+09:00</published><updated>2017-01-08T08:45:13+09:00</updated><id>https://hayagou.github.io/2017/01/08/factory</id><content type="html" xml:base="https://hayagou.github.io/2017/01/08/factory.html">&lt;h1 id=&quot;디자인패턴-factory-method-pattern&quot;&gt;[디자인패턴] Factory Method Pattern&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;객체&lt;/strong&gt;  &lt;strong&gt;생성&lt;/strong&gt;  &lt;strong&gt;처리를&lt;/strong&gt;  &lt;strong&gt;서브&lt;/strong&gt;  &lt;strong&gt;클래스로&lt;/strong&gt;  &lt;strong&gt;분리&lt;/strong&gt;해  처리하도록  캡슐화하는  패턴&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;객체의  생성  코드를  별도의  클래스/메서드로  분리함으로써  객체  생성의  변화에  대비하는  데  유용하다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;특정  기능의  구현은  개별  클래스를  통해  제공되는  것이  바람직한  설계다&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;기능의  변경이나  상황에  따른  기능의  선택은  해당  객체를  생성하는  코드의  변경을  초래한다.&lt;/li&gt;
+      &lt;li&gt;상황에  따라  적절한  객체를  생성하는  코드는  자주  중복될  수  있다.&lt;/li&gt;
+      &lt;li&gt;객체  생성  방식의  변화는  해당되는  모든  코드  부분을  변경해야  하는  문제가  발생한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;스트래티지  패턴, 싱글턴  패턴, 템플릿  메서드  패턴을  사용한다.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ds/factory.png&quot; alt=&quot;Factory 패턴&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;역할이--수행하는--작업&quot;&gt;역할이  수행하는  작업&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Product : 팩토리  메서드로  생성될  객체의  공통  인터페이스&lt;/li&gt;
+  &lt;li&gt;ConcreteProduct : 구체적으로  객체가  생성되는  클래스&lt;/li&gt;
+  &lt;li&gt;Creator : 팩토리  메서드를  갖는  클래스&lt;/li&gt;
+  &lt;li&gt;ConcreteCreator : 팩토리  메서드를  구현하는  클래스로 ConcreteProduct 객체를  생성&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;팩토리--메서드--패턴의--개념과--적용--방법&quot;&gt;팩토리  메서드  패턴의  개념과  적용  방법&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;객체  생성을  전담하는  별도의 Factory 클래스  이용&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-   스트래티지  패턴과  싱글턴  패턴을  이용한다.
+-   해당 Post에서는  이  방법을  기준으로  팩토리  메서드  패턴을  적용한다
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;상속  이용: 하위  클래스에서  적합한  클래스의  객체를  생성&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-   스트래티지  패턴, 싱글턴  패턴과  템플릿  메서드  패턴을  이용한다.
+-   해당 Post의  맨  하단에 ‘다른  방법으로  팩토리  메서드  패턴  적용하기’를  확인한다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] Factory Method Pattern</summary></entry><entry><title type="html">Singleton Pattern</title><link href="https://hayagou.github.io/2017/01/07/singleton.html" rel="alternate" type="text/html" title="Singleton Pattern" /><published>2017-01-07T08:45:13+09:00</published><updated>2017-01-07T08:45:13+09:00</updated><id>https://hayagou.github.io/2017/01/07/singleton</id><content type="html" xml:base="https://hayagou.github.io/2017/01/07/singleton.html">&lt;h1 id=&quot;디자인패턴singleton-pattern&quot;&gt;[디자인패턴]Singleton Pattern&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;전역  변수를  사용하지  않고  객체를  하나만  생성  하도록  하며, 생성된  객체를  어디에서든지  참조할  수  있도록  하는  패턴&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;역할이  수행하는  작업&lt;/p&gt;
 
     &lt;ul&gt;
-      &lt;li&gt;Componet : 구체적인  부분, 즉 Leaf 클래스와  전체에  해당하는 Composite 클래스에  공통  인터페이스를  정의&lt;/li&gt;
-      &lt;li&gt;Leaf : 구체적인  부분  클래스, 즉 Leaf 클래스와  전체에  해당하는 Composite 클래스에  공통  인터페이스를  정의&lt;/li&gt;
-      &lt;li&gt;Composite : 전체  클래스, 복수  개의 Component를  갖도록  정의, 그러므로  복수  개의 Leaf, 심지어  복수  개의 Composite 객체를  부분으로  가질  수  있음&lt;/li&gt;
+      &lt;li&gt;Singleton : 하나의  인스턴스만을  생성하는  책임이  있으며 getInstance 메서드를  통해  모든  클라이언트에게  동일한  인스턴스를  반환하는  작업을  수행한다&lt;/li&gt;
     &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] Composite Pattern</summary></entry><entry><title type="html">Observer 패턴</title><link href="https://hayagou.github.io/2017/01/04/Observer_%ED%8C%A8%ED%84%B4.html" rel="alternate" type="text/html" title="Observer 패턴" /><published>2017-01-04T08:45:13+09:00</published><updated>2017-01-04T08:45:13+09:00</updated><id>https://hayagou.github.io/2017/01/04/Observer_%ED%8C%A8%ED%84%B4</id><content type="html" xml:base="https://hayagou.github.io/2017/01/04/Observer_%ED%8C%A8%ED%84%B4.html">&lt;h1 id=&quot;디자인패턴-observer-패턴&quot;&gt;[디자인패턴] Observer 패턴&lt;/h1&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Observer pattern :  한  객체의  상태  변화에  따라  다른  객체의  상태도  연동되도록  &lt;strong&gt;일대다&lt;/strong&gt;  &lt;strong&gt;객체&lt;/strong&gt;  &lt;strong&gt;의존&lt;/strong&gt;  &lt;strong&gt;관계를&lt;/strong&gt;  &lt;strong&gt;구성&lt;/strong&gt;  하는  패턴&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;데이터의  변경이  발생했을  경우  &lt;strong&gt;상대&lt;/strong&gt;  &lt;strong&gt;클래스나&lt;/strong&gt;  &lt;strong&gt;객체에&lt;/strong&gt;  &lt;strong&gt;의존하지&lt;/strong&gt;  &lt;strong&gt;않으면서&lt;/strong&gt;  &lt;strong&gt;데이터&lt;/strong&gt;  &lt;strong&gt;변경을&lt;/strong&gt;  &lt;strong&gt;통보하고자&lt;/strong&gt;  &lt;strong&gt;할&lt;/strong&gt;  &lt;strong&gt;때&lt;/strong&gt;  유용하다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/posts/ds/observer.png&quot; alt=&quot;Observer 패턴&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;옵저버  패턴은  통보  대상  객체의  관리를 Subject 클래스와 Observer 인터페이스로  일반화한다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;이를  통해  데이터  변경을  통보하는  클래스(ConcreteSubject)는  통보  대상  클래스나  객체(ConcreteObserver)에  대한  의존성을  없앨  수  있다.&lt;/li&gt;
-      &lt;li&gt;결과적으로  통보  대상ㅇ  클래스나  대상  객체의  변경에도  &lt;strong&gt;통보하는&lt;/strong&gt;  &lt;strong&gt;클래스&lt;/strong&gt;&lt;strong&gt;(ConcreteSubjectt)&lt;/strong&gt;&lt;strong&gt;를&lt;/strong&gt;  &lt;strong&gt;수정&lt;/strong&gt;  &lt;strong&gt;없이&lt;/strong&gt;  &lt;strong&gt;그대로&lt;/strong&gt;  &lt;strong&gt;사용할&lt;/strong&gt;  &lt;strong&gt;수&lt;/strong&gt;  &lt;strong&gt;있다&lt;/strong&gt;&lt;strong&gt;.&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;역활이  수행하는  작업&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Observer : update메소드를  사용하여  데이터의  변경을  통보  받는  인터페이스&lt;/li&gt;
-      &lt;li&gt;Subject : ConcreteObserver 객체를  관리, Observer 인터페이스를  참조해서 ConcreteObserver를  관리하므로 ConcreteObserver의  변화에  독립적일  수  있다.&lt;/li&gt;
-      &lt;li&gt;ConcreteSubject : 변경  관리  대상이  되는  데이터가  있는  클래스(통보  클래스) , setState 메서드에서는  자신의  데이터인 subjectState를  변경하고 Subject의 notifyObservers 메서드를  호출해서 ConcreteObserver 객체에  변경을  통보한다&lt;/li&gt;
-      &lt;li&gt;ConcreteObserver : ConcreteSubject의  변경을  통보받는  클래스, Observer 인터페이스의 update 메서드를  구현함으로써  변경을  통보받는다. 변경된  데이터는 ConcreteSubject의 getState 메서드를  호출함으로써  변경을  조회한다.&lt;/li&gt;
-    &lt;/ul&gt;
+    &lt;p&gt;&lt;img src=&quot;/img/posts/ds/singleton1.png&quot; alt=&quot;singleton&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/ds/observer2.png&quot; alt=&quot;Observer 패턴2&quot; class=&quot;img-responsive center-block&quot; width=&quot;760&quot; /&gt;&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] Observer 패턴</summary></entry><entry><title type="html">Strategy 패턴</title><link href="https://hayagou.github.io/2017/01/03/Strategy_%ED%8C%A8%ED%84%B4.html" rel="alternate" type="text/html" title="Strategy 패턴" /><published>2017-01-03T08:45:13+09:00</published><updated>2017-01-03T08:45:13+09:00</updated><id>https://hayagou.github.io/2017/01/03/Strategy_%ED%8C%A8%ED%84%B4</id><content type="html" xml:base="https://hayagou.github.io/2017/01/03/Strategy_%ED%8C%A8%ED%84%B4.html">&lt;h1 id=&quot;디자인패턴-strategy-패턴&quot;&gt;[디자인패턴] Strategy 패턴&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;행위&lt;/strong&gt;  &lt;strong&gt;클래스로&lt;/strong&gt;  &lt;strong&gt;캡슐화해&lt;/strong&gt;  동적으로  행위를  자유롭게  바꿀  수  있게  해주는  패턴&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;같은  문제를  해결하는  여러  알고리즘이  클래스별로  캡슐화되어  있고  이들이  필요할  때  교체  할  수  있도록  함으로써  동일한  문제를  다른  알고리즘으로  해결할  수  있게  하는  디자인패턴&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;전략을&lt;/strong&gt;  &lt;strong&gt;쉽게&lt;/strong&gt;  &lt;strong&gt;바꿀&lt;/strong&gt;  &lt;strong&gt;수&lt;/strong&gt;  &lt;strong&gt;있도록&lt;/strong&gt;  해주는  디자인  패턴이다&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;전략이란? 어떤  목적을  달성하기  위해  일을  수행하는  방식, 비즈니스  규칙, 문제를  해결하는  알고리즘등&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;container&quot;&gt;
-&lt;img src=&quot;/img/posts/ds/strategy.png&quot; alt=&quot;strategy패턴&quot; class=&quot;img-responsive center-block&quot; /&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;행동--추가--하기&quot;&gt;행동  추가  하기&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;상속을  통한  행동  확장&lt;br /&gt;
-(문제점)
-    &lt;ul&gt;
-      &lt;li&gt;각 subclass에서  원하지  않는  결과가  발생하는  지를  검사해야함- 여러 subclass가  변경될  수  있음&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Composition을  사용한  해결&lt;/li&gt;
-  &lt;li&gt;Polymorphic Composition을  통한  클래스의  확장
-    &lt;ol&gt;
-      &lt;li&gt;클래스에서  변경  가능한  부분을  분리하고  추상화함&lt;/li&gt;
-      &lt;li&gt;분리한  부분을  구성을  사용하여  통합함&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] Strategy 패턴</summary></entry><entry><title type="html">디자인패턴 종류</title><link href="https://hayagou.github.io/2017/01/02/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4%EC%A2%85%EB%A5%98.html" rel="alternate" type="text/html" title="디자인패턴 종류" /><published>2017-01-02T08:45:13+09:00</published><updated>2017-01-02T08:45:13+09:00</updated><id>https://hayagou.github.io/2017/01/02/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4%EC%A2%85%EB%A5%98</id><content type="html" xml:base="https://hayagou.github.io/2017/01/02/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4%EC%A2%85%EB%A5%98.html">&lt;h1 id=&quot;디자인패턴-디자인패턴-종류&quot;&gt;[디자인패턴] 디자인패턴 종류&lt;/h1&gt;
-
-&lt;hr /&gt;
-
-&lt;div class=&quot;container&quot;&gt;
-&lt;img src=&quot;/img/posts/ds/ds1.png&quot; alt=&quot;디자인패턴 종류&quot; class=&quot;img-responsive center-block&quot; /&gt;
-&lt;/div&gt;
+&lt;h3 id=&quot;장점&quot;&gt;장점&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;생성(Creational) 패턴- 추상  팩토리(Abstract Factory) : 구제적인  클래스에  의존하지  않고  서로  연관되거나  의존적인  객체들의  조합을  만드는  인터페이스를  제공하는  패턴- 팩토리  메서드(Factory Method) : 객체  생성  처리를  서브  클래스로  분리해  처리하도록  캡슐화하는  패턴- 싱글턴(Singleton) : 전역  변수를  사용하지  않고  객체를  하나만  생성하도록  하며, 생성된  객체를  어디에서든지  참조할  수  있도록  하는  패턴&lt;/p&gt;
+    &lt;p&gt;메모리  낭비  방지 , 데이터  공유  용이&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;구조(Structural) 패턴- 컴퍼지트(Composite) : 여러  개의  객체들로  구성된  복합  객체와  단일  객체를  클라이언트에서  구별  없이  다루게  해주는  패턴- 데커레이터(Decorator) : 객체의  결합을  통해  기능을  동적으로  유연하게  확장할  수  있게  해주는  패턴&lt;/p&gt;
+    &lt;p&gt;인스턴스가  절대적으로  한개만  존재하는  것을  보증하고  싶을  경우&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;행위(Behavioral) 패턴- 옵저버(Observer) : 한  객체의  상태  변화에  따라  다른  객체의  상태도  연동되도록  일대다  객체  의존  관계를  구성하는  패턴- 스테이트(State) : 객체의  상태에  따라  객체의  행위  내용을  변경해주는  패턴- 스트래티지(Strategy) : 행위를  클래스로  캡슐화해  동적으로  행위를  자유롭게  바꿀  수  있게  해주는  패턴- 템플릿  메서드(Template Method) : 어떤  작업을  처리하는  일부분을  서브  클래스로  캡슐화해  전체  일을  수행하는  구조는  바꾸지  않으면서  특정  단계에서  수행하는  내역을  바꾸는  패턴&lt;br /&gt;
-커멘드(Command) : 실행될  기능을  캡슐화함으로써  주어진  여러  기능을  실행할  수  있는  재사용성이  높은  클래스를  설계하는  패턴&lt;/p&gt;
+    &lt;p&gt;두  번째  이용시부터  객체  로딩  시간이  현저하게  줄어  성능이  좋아짐&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] 디자인패턴 종류</summary></entry><entry><title type="html">UML과 클래스 다이어그램</title><link href="https://hayagou.github.io/2017/01/02/uml.html" rel="alternate" type="text/html" title="UML과 클래스 다이어그램" /><published>2017-01-02T00:45:13+09:00</published><updated>2017-01-02T00:45:13+09:00</updated><id>https://hayagou.github.io/2017/01/02/uml</id><content type="html" xml:base="https://hayagou.github.io/2017/01/02/uml.html">&lt;h1 id=&quot;디자인패턴-uml&quot;&gt;[디자인패턴] UML&lt;/h1&gt;
+&lt;/ol&gt;
 
-&lt;hr /&gt;
+&lt;h3 id=&quot;멀티쓰레드에서--안전한thread-safe-싱글톤--클래스-인스턴스--만드는--방법&quot;&gt;멀티쓰레드에서  안전한(Thread-safe) 싱글톤  클래스, 인스턴스  만드는  방법&lt;/h3&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;UML의 구성 요소&lt;/strong&gt;&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;strong&gt;사물(Things)&lt;/strong&gt; : 기본 요소&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;관계(Relationship)&lt;/strong&gt; : 사물 간의 관계&lt;/li&gt;
-    &lt;li&gt;&lt;strong&gt;다이어그램(Diagram)&lt;/strong&gt; : 사물관 관계를 도형으로 표현
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Thread safe Lazy initialization (게으른  초기화)&lt;br /&gt;
+private static으로  인스턴스  변수를  만들고 private 생성자로  외부에서  생성을  막았으며 synchronized 키워드를  사용해서 thread-safe하게  만들었다.&lt;br /&gt;
+하지만 synchronized 특성상  비교적  큰  성능저하가  발생하므로  권장하지  않는  방법이다.&lt;/p&gt;
 
-&lt;h2 id=&quot;사물things&quot;&gt;사물(Things)&lt;/h2&gt;
-&lt;hr /&gt;
+    &lt;p&gt;&lt;img src=&quot;/img/posts/ds/singleton2.png&quot; alt=&quot;singleton&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Thread safe lazy initialization + Double-checked locking&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;게이른  초기화의  성능저하를  완화시키는  방법&lt;br /&gt;
+getInstance()에 synchronized를  사용하는  것이  아니라  첫  번째 if문으로  인스턴스의  존재여부를  체크하고  두  번째 if문에서  다시  한번  체크할  때  동기화  시켜서  인스턴스를  생성하므로 thread-safe하면서도  처음  생성  이후에 synchonized 블럭을  타지  않기  때문에  성능저하를  완화했다.그러나  완벽한  방법은  아니다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;사물은 추상적 개념으로서 모델에서 가장 중요&lt;/p&gt;
-&lt;/blockquote&gt;
+ 	&lt;img src=&quot;/img/posts/ds/singleton3.png&quot; alt=&quot;singleton&quot; class=&quot;img-responsive center-block&quot; /&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;구조사물 : 시스템의 구조를 표현하는 사물&lt;/li&gt;
-  &lt;li&gt;해동사물 : 시스템의 행위를 표현하는 사물&lt;/li&gt;
-  &lt;li&gt;그룹사물 : 개념을 그룹화하는 사물&lt;/li&gt;
-  &lt;li&gt;주해사물 : 부가적으로 개념을 설명하는 사물
-&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Initialization on demand holder idiom (holder에  의한  초기화)&lt;br /&gt;
+-클래스안에  클래스(Holder)를  두어 JVM의 Classloader매커니즘과 Class가  로드되는  시점을  이용한방법&lt;/p&gt;
 
-&lt;h2 id=&quot;관계&quot;&gt;관계&lt;/h2&gt;
-&lt;hr /&gt;
+    &lt;p&gt;&lt;img src=&quot;/img/posts/ds/singleton4.png&quot; alt=&quot;singleton&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;요소가 서로 연관되는 방법&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;table-responsive table-bordered table-condensed&quot;&gt;
-	&lt;table class=&quot;table&quot;&gt;
-		&lt;tr class=&quot;text-center&quot;&gt;
-			&lt;th&gt;관계&lt;/th&gt;
-			&lt;th&gt;표시&lt;/th&gt;
-			&lt;th&gt;설명&lt;/th&gt;
-		&lt;/tr&gt;
-		&lt;tr&gt;
-			&lt;td&gt;연관관계(association)&lt;/td&gt;
-			&lt;td&gt;&lt;img data-action=&quot;zoom&quot; src=&quot;/img/posts/uml/association.png&quot; alt=&quot;association&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
-			&lt;td&gt;두 사물간의 의미적  관계, 하나의 요소의 변화는 다른 하나에 영향을 미치는 두가지 사이의 관계&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr&gt;
-			&lt;td&gt;일반화  관계(generalization)&lt;/td&gt;
-			&lt;td&gt;&lt;img src=&quot;/img/posts/uml/generalization.png&quot; alt=&quot;generalization&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
-			&lt;td&gt;클래스와 인터페이스 사이에서 상속관계를 설명&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr&gt;
-			&lt;td&gt;집약관계(aggregation)&lt;/td&gt;
-			&lt;td&gt;&lt;img src=&quot;/img/posts/uml/aggregation.png&quot; alt=&quot;aggregation&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
-			&lt;td&gt;라이프  타임은  독립적전체, 객체가 없어져도 부분 객체는  없어지지않는다&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr&gt;
-			&lt;td&gt;합성  관계(composition)&lt;/td&gt;
-			&lt;td&gt;&lt;img src=&quot;/img/posts/uml/composition.png&quot; alt=&quot;composition&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
-			&lt;td&gt;라이프  타임은  의존적, 전체  객체가  없어지면  부분객체도  없어진다.&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr&gt;
-			&lt;td&gt;의존관계(dependency)&lt;/td&gt;
-			&lt;td&gt;&lt;img src=&quot;/img/posts/uml/dependency.png&quot; alt=&quot;dependency&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
-			&lt;td&gt;연관  관계와  같음, 차이점은  두  클래스의  관계가  한  메서드를  실행하는  동안과  같은, 매우  짧은  시간만  유지된다는  점이다.&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr&gt;
-			&lt;td&gt;실체화  관계(realization)&lt;/td&gt;
-			&lt;td&gt;&lt;img src=&quot;/img/posts/uml/realization.png&quot; alt=&quot;realization&quot; width=&quot;200&quot; height=&quot;110&quot; /&gt;&lt;/td&gt;
-			&lt;td&gt;인터페이스와  클래스  컴포넌트  사이의  관계를  지정&lt;/td&gt;
-		&lt;/tr&gt;
-	&lt;/table&gt;
-&lt;/div&gt;
-
-&lt;!-- | 관계 |표시 |설명|
-|--|--|--|
-| 연관관계(association) |  &lt;img data-action=&quot;zoom&quot; src='/img/posts/uml/association.png' alt='association' width=&quot;200&quot; height=&quot;110&quot;&gt;|두 사물간의 의미적  관계, 하나의 요소의 변화는 다른 하나에 영향을 미치는 두가지 사이의 관계 |
-|일반화  관계(generalization)  | &lt;img src=&quot;/img/posts/uml/generalization.png&quot; alt='generalization' width=&quot;200&quot; height=&quot;110&quot;&gt; |클래스와 인터페이스 사이에서 상속관계를 설명 |
-|집약관계(aggregation)|&lt;img src=&quot;/img/posts/uml/aggregation.png&quot; alt='aggregation' width=&quot;200&quot; height=&quot;110&quot;&gt;|라이프  타임은  독립적전체, 객체가 없어져도 부분 객체는  없어지지않는다|
-|합성  관계(composition)|&lt;img src=&quot;/img/posts/uml/composition.png&quot; alt='composition' width=&quot;200&quot; height=&quot;110&quot;&gt;|라이프  타임은  의존적, 전체  객체가  없어지면  부분객체도  없어진다.|
-|의존관계(dependency)|&lt;img src=&quot;/img/posts/uml/dependency.png&quot; alt='dependency' width=&quot;200&quot; height=&quot;110&quot;&gt;|연관  관계와  같음, 차이점은  두  클래스의  관계가  한  메서드를  실행하는  동안과  같은, 매우  짧은  시간만  유지된다는  점이다.|
-|실체화  관계(realization)|&lt;img src=&quot;/img/posts/uml/realization.png&quot; alt='realization' width=&quot;200&quot; height=&quot;110&quot;&gt;|인터페이스와  클래스  컴포넌트  사이의  관계를  지정| --&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] UML</summary></entry><entry><title type="html">Table and Form</title><link href="https://hayagou.github.io/2011/01/02/table_form.html" rel="alternate" type="text/html" title="Table and Form" /><published>2011-01-02T08:45:13+09:00</published><updated>2011-01-02T08:45:13+09:00</updated><id>https://hayagou.github.io/2011/01/02/table_form</id><content type="html" xml:base="https://hayagou.github.io/2011/01/02/table_form.html">&lt;h1 id=&quot;부트스트랩-테이블과-폼-태그-스타일&quot;&gt;[부트스트랩] 테이블과 폼 태그 스타일&lt;/h1&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tr 	//table row, 가로 
-td 	//table data, 세로
-th 	//table header
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;그리드 레이아웃의 row 를 그대로 적용해서 네이밍 한것
-“td” 가 table col이 아니고 table data인 이유는 데이터가 들어가는 부분이라서&lt;/p&gt;
-
-&lt;h2 id=&quot;table-class들&quot;&gt;Table Class들&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;table class=&quot;table&quot;&amp;gt;
-  ...
-&amp;lt;/table&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;table.table&lt;/strong&gt; : 약간의 패딩과 수평 구분선&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;table.table-striped&lt;/strong&gt; : 줄무늬 행&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;table.table-striped&lt;/strong&gt; : 선있는 테이블&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;table.table-hover&lt;/strong&gt; : 행 hover, 마우스올리면 불들어옴&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;table.table-condensed&lt;/strong&gt; : 좁은폭 테이블&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;table-row에-효과를-넣고-싶을&quot;&gt;Table Row에 효과를 넣고 싶을&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;div class=&quot;table-responsive&quot;&gt;
-    &lt;table class=&quot;table table-bordered table-striped&quot;&gt;
-      &lt;colgroup&gt;
-        &lt;col class=&quot;col-xs-1&quot; /&gt;
-        &lt;col class=&quot;col-xs-7&quot; /&gt;
-      &lt;/colgroup&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;
-          &lt;th&gt;클래스&lt;/th&gt;
-          &lt;th&gt;설명&lt;/th&gt;
-        &lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;th scope=&quot;row&quot;&gt;
-            &lt;code&gt;.active&lt;/code&gt;
-          &lt;/th&gt;
-          &lt;td&gt;특정한 행이나 셀에 hover 했을 때와 같은 색을 입힙니다.&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;th scope=&quot;row&quot;&gt;
-            &lt;code&gt;.success&lt;/code&gt;
-          &lt;/th&gt;
-          &lt;td&gt;성공적이거나 긍정적인 액션을 의미합니다.&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;th scope=&quot;row&quot;&gt;
-            &lt;code&gt;.info&lt;/code&gt;
-          &lt;/th&gt;
-          &lt;td&gt;중립적인 정보의 변화나 액션을 의미합니다.&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;th scope=&quot;row&quot;&gt;
-            &lt;code&gt;.warning&lt;/code&gt;
-          &lt;/th&gt;
-          &lt;td&gt;주의가 필요한 경고를 의미합니다.&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;th scope=&quot;row&quot;&gt;
-            &lt;code&gt;.danger&lt;/code&gt;
-          &lt;/th&gt;
-          &lt;td&gt;위험하거나 부정적일수 있는 액션을 의미합니다. &lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;!-- On rows --&amp;gt;
-&amp;lt;tr class=&quot;active&quot;&amp;gt;...&amp;lt;/tr&amp;gt;
-&amp;lt;tr class=&quot;success&quot;&amp;gt;...&amp;lt;/tr&amp;gt;
-&amp;lt;tr class=&quot;warning&quot;&amp;gt;...&amp;lt;/tr&amp;gt;
-&amp;lt;tr class=&quot;danger&quot;&amp;gt;...&amp;lt;/tr&amp;gt;
-&amp;lt;tr class=&quot;info&quot;&amp;gt;...&amp;lt;/tr&amp;gt;
-
-&amp;lt;!-- On cells (`td` or `th`) --&amp;gt;
-&amp;lt;tr&amp;gt;
-  &amp;lt;td class=&quot;active&quot;&amp;gt;...&amp;lt;/td&amp;gt;
-  &amp;lt;td class=&quot;success&quot;&amp;gt;...&amp;lt;/td&amp;gt;
-  &amp;lt;td class=&quot;warning&quot;&amp;gt;...&amp;lt;/td&amp;gt;
-  &amp;lt;td class=&quot;danger&quot;&amp;gt;...&amp;lt;/td&amp;gt;
-  &amp;lt;td class=&quot;info&quot;&amp;gt;...&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;폼태그-스타일&quot;&gt;폼태그 스타일&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;form.form-inline
-	div.form-group.has-success.has-feedback
-		div.input-group
-			span.input-group-addon
-				span.glyphicon glyphicon-*(들어가 이미지 명)
-			input.form-control
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;form-inline&lt;/strong&gt; : 폼의 요소들을 한줄로 정
-&lt;strong&gt;form-horizontal&lt;/strong&gt; : 폼의 요소들을 수평으로 정렬
-&lt;strong&gt;form-group&lt;/strong&gt; : form태그 안의 최적의 여백을 위해
-&lt;strong&gt;input-control&lt;/strong&gt; : 조작하고싶은 요소
-&lt;strong&gt;control-label&lt;/strong&gt; : 레이블테그가 form-group이 가지고있는 스타일을 따라
-&lt;strong&gt;has-스타일이름&lt;/strong&gt; : 입력창에 스타일을 줌
-&lt;strong&gt;input-group&lt;/strong&gt; : 인풋 테그 스타일을 줌
-&lt;strong&gt;input-group-addon&lt;/strong&gt; : 인풋 태그에 보조아이콘 추&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">[부트스트랩] 테이블과 폼 태그 스타일</summary></entry></feed>
+    &lt;p&gt;개발자가  직접  동기화  문제에  대해  코드를  작성하고  문제를  회피하려  한다면  프로그램  구조가  그  만큼  복잡해지고  비용  문제가  생길  수  있고  특히  정확하지  못한  경우가  많다.(100%가  아닐수  있음) 그런데  이  방법은 JVM의  클래스  초기화  과정에서  보장되는  원자적  특성을  이용하여  싱글턴의  초기화  문제에  대한  책임을 JVM에  떠넘긴다. holder안에  선언된 instance가 static이기  때문에  클래스  로딩시점에  한번만  호출될  것이며 final을  사용해  다시  값이  할당되지  않도록  만든  방법.&lt;br /&gt;
+&lt;strong&gt;가장  많이  사용하고  일반적인 Singleton 클래스  사용  방법이다.&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴]Singleton Pattern</summary></entry></feed>

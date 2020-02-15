@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    Grid Option - Hayagou
+    Adapter Pattern - Hayagou
     
   </title>
 
-  <meta name="description" content="[부트스트랩] Grid options : offset, nesting, ordering">
+  <meta name="description" content="[디자인패턴] Adapter Pattern">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="https://hayagou.github.io/2019/10/30/grid_optoin.html">
+  <link rel="canonical" href="https://hayagou.github.io/2017/01/10/adaptor.html">
   <link rel="alternate" type="application/rss+xml" title="Hayagou" href="/feed.xml">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -75,11 +75,11 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>Grid Option</h1>
+            <h1>Adapter Pattern</h1>
             
             <span class="meta">Posted by
               <a href="#">hayagou</a>
-              on 2019-10-30 &middot; <span class="reading-time" title="Estimated read time">
+              on 2017-01-10 &middot; <span class="reading-time" title="Estimated read time">
   
    1 min  read </span>
 
@@ -94,73 +94,18 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
-        <h1 id="부트스트랩-grid-options--offset-nesting-ordering">[부트스트랩] Grid options : offset, nesting, ordering</h1>
-<hr />
+        <h1 id="디자인패턴-adapter-pattern">[디자인패턴] Adapter Pattern</h1>
 
-<p><strong>디바이스 사이즈</strong></p>
+<hr />
 
 <ul>
-  <li>
-    <p>xs : 스마트폰 사이즈</p>
-  </li>
-  <li>
-    <p>sm : 태블릿 사이즈</p>
-  </li>
-  <li>
-    <p>md : 데스크탑 사이즈</p>
-  </li>
-  <li>
-    <p>lg : 큰 모니터 사이즈</p>
-  </li>
+  <li>adapter pattern은 관계가 없는 인터페이스들이 같이 일할 수 있도록 도와주는 디자인 패턴이다.</li>
+  <li>2가지 방법 : OBJECT adapter pattern (구성),  CLASS adapter pattern(다중 상속)</li>
 </ul>
 
-<p><br /></p>
+<p><img src="/img/posts/ds/adapter.png" alt="adapter 패턴" class="img-responsive center-block" /></p>
 
-<h2 id="offset">offset</h2>
-<hr />
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-col-*-offset-*
-
-</code></pre></div></div>
-
-<p>요소를 옮기고 싶을때 사용</p>
-
-<p><br /></p>
-
-<h2 id="nesting">nesting</h2>
-
-<hr />
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-.container
-    .row
-	 .col-md-*
-		row               //row가 두개 이상들어갈수 있다.
-			.col-md-*
-			.col-md-*
-		row
-			.col-md-*
-</code></pre></div></div>
-
-<p>요소들을 묶을때 사용, 중첩 구문</p>
-
-<p><br /></p>
-
-<h2 id="ordering">ordering</h2>
-
-<hr />
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-col-*-push-*  //오른쪽으로 밀어냄
-
-col-*-pull-*  //왼쪽으로 밀어냄
-
-</code></pre></div></div>
-
-<p>요소들의 순서를 바꾸어 줌</p>
-
-<p><br /></p>
+<p><img src="/img/posts/ds/adapter1.png" alt="adapter 패턴" class="img-responsive center-block" /></p>
 
 
         <hr>
@@ -181,11 +126,11 @@ col-*-pull-*  //왼쪽으로 밀어냄
         <div class="clearfix">
 
           
-          <a class="btn btn-primary float-left" href="/2017/01/05/img.html" data-toggle="tooltip" data-placement="top" title="Composite Pattern">&larr; Previous<span class="d-none d-md-inline">
+          <a class="btn btn-primary float-left" href="/2017/01/09/abstract_factory.html" data-toggle="tooltip" data-placement="top" title="Abstract Factory Pattern">&larr; Previous<span class="d-none d-md-inline">
               Post</span></a>
           
           
-          <a class="btn btn-primary float-right" href="/2019/10/30/button.html" data-toggle="tooltip" data-placement="top" title="Button">Next<span class="d-none d-md-inline">
+          <a class="btn btn-primary float-right" href="/2017/01/11/facade.html" data-toggle="tooltip" data-placement="top" title="Facade Pattern">Next<span class="d-none d-md-inline">
               Post</span> &rarr;</a>
           
 

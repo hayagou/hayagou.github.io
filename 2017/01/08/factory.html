@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    Table and Form - Hayagou
+    Factory Method Pattern - Hayagou
     
   </title>
 
-  <meta name="description" content="[부트스트랩] 테이블과 폼 태그 스타일">
+  <meta name="description" content="[디자인패턴] Factory Method Pattern">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="https://hayagou.github.io/2011/01/02/table_form.html">
+  <link rel="canonical" href="https://hayagou.github.io/2017/01/08/factory.html">
   <link rel="alternate" type="application/rss+xml" title="Hayagou" href="/feed.xml">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -75,13 +75,13 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>Table and Form</h1>
+            <h1>Factory Method Pattern</h1>
             
             <span class="meta">Posted by
               <a href="#">hayagou</a>
-              on 2011-01-02 &middot; <span class="reading-time" title="Estimated read time">
+              on 2017-01-08 &middot; <span class="reading-time" title="Estimated read time">
   
-   2 mins  read </span>
+   1 min  read </span>
 
             </span>
           </div>
@@ -94,125 +94,54 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
-        <h1 id="부트스트랩-테이블과-폼-태그-스타일">[부트스트랩] 테이블과 폼 태그 스타일</h1>
+        <h1 id="디자인패턴-factory-method-pattern">[디자인패턴] Factory Method Pattern</h1>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tr 	//table row, 가로 
-td 	//table data, 세로
-th 	//table header
+<blockquote>
+  <p><strong>객체</strong>  <strong>생성</strong>  <strong>처리를</strong>  <strong>서브</strong>  <strong>클래스로</strong>  <strong>분리</strong>해  처리하도록  캡슐화하는  패턴</p>
+</blockquote>
+
+<ul>
+  <li>객체의  생성  코드를  별도의  클래스/메서드로  분리함으로써  객체  생성의  변화에  대비하는  데  유용하다.</li>
+  <li>
+    <p>특정  기능의  구현은  개별  클래스를  통해  제공되는  것이  바람직한  설계다</p>
+
+    <ul>
+      <li>기능의  변경이나  상황에  따른  기능의  선택은  해당  객체를  생성하는  코드의  변경을  초래한다.</li>
+      <li>상황에  따라  적절한  객체를  생성하는  코드는  자주  중복될  수  있다.</li>
+      <li>객체  생성  방식의  변화는  해당되는  모든  코드  부분을  변경해야  하는  문제가  발생한다.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><em>스트래티지  패턴, 싱글턴  패턴, 템플릿  메서드  패턴을  사용한다.</em></p>
+
+<p><img src="/img/posts/ds/factory.png" alt="Factory 패턴" class="img-responsive center-block" /></p>
+
+<h3 id="역할이--수행하는--작업">역할이  수행하는  작업</h3>
+
+<ul>
+  <li>Product : 팩토리  메서드로  생성될  객체의  공통  인터페이스</li>
+  <li>ConcreteProduct : 구체적으로  객체가  생성되는  클래스</li>
+  <li>Creator : 팩토리  메서드를  갖는  클래스</li>
+  <li>ConcreteCreator : 팩토리  메서드를  구현하는  클래스로 ConcreteProduct 객체를  생성</li>
+</ul>
+
+<h3 id="팩토리--메서드--패턴의--개념과--적용--방법">팩토리  메서드  패턴의  개념과  적용  방법</h3>
+<ol>
+  <li>객체  생성을  전담하는  별도의 Factory 클래스  이용</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-   스트래티지  패턴과  싱글턴  패턴을  이용한다.
+-   해당 Post에서는  이  방법을  기준으로  팩토리  메서드  패턴을  적용한다
 </code></pre></div></div>
 
-<p>그리드 레이아웃의 row 를 그대로 적용해서 네이밍 한것
-“td” 가 table col이 아니고 table data인 이유는 데이터가 들어가는 부분이라서</p>
+<ol>
+  <li>상속  이용: 하위  클래스에서  적합한  클래스의  객체를  생성</li>
+</ol>
 
-<h2 id="table-class들">Table Class들</h2>
-<hr />
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table class="table"&gt;
-  ...
-&lt;/table&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-   스트래티지  패턴, 싱글턴  패턴과  템플릿  메서드  패턴을  이용한다.
+-   해당 Post의  맨  하단에 ‘다른  방법으로  팩토리  메서드  패턴  적용하기’를  확인한다.
 </code></pre></div></div>
-
-<p><strong>table.table</strong> : 약간의 패딩과 수평 구분선</p>
-
-<p><strong>table.table-striped</strong> : 줄무늬 행</p>
-
-<p><strong>table.table-striped</strong> : 선있는 테이블</p>
-
-<p><strong>table.table-hover</strong> : 행 hover, 마우스올리면 불들어옴</p>
-
-<p><strong>table.table-condensed</strong> : 좁은폭 테이블</p>
-
-<p><br /></p>
-<hr />
-
-<h2 id="table-row에-효과를-넣고-싶을">Table Row에 효과를 넣고 싶을</h2>
-<hr />
-
-<div class="table-responsive">
-    <table class="table table-bordered table-striped">
-      <colgroup>
-        <col class="col-xs-1" />
-        <col class="col-xs-7" />
-      </colgroup>
-      <thead>
-        <tr>
-          <th>클래스</th>
-          <th>설명</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">
-            <code>.active</code>
-          </th>
-          <td>특정한 행이나 셀에 hover 했을 때와 같은 색을 입힙니다.</td>
-        </tr>
-        <tr>
-          <th scope="row">
-            <code>.success</code>
-          </th>
-          <td>성공적이거나 긍정적인 액션을 의미합니다.</td>
-        </tr>
-        <tr>
-          <th scope="row">
-            <code>.info</code>
-          </th>
-          <td>중립적인 정보의 변화나 액션을 의미합니다.</td>
-        </tr>
-        <tr>
-          <th scope="row">
-            <code>.warning</code>
-          </th>
-          <td>주의가 필요한 경고를 의미합니다.</td>
-        </tr>
-        <tr>
-          <th scope="row">
-            <code>.danger</code>
-          </th>
-          <td>위험하거나 부정적일수 있는 액션을 의미합니다. </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- On rows --&gt;
-&lt;tr class="active"&gt;...&lt;/tr&gt;
-&lt;tr class="success"&gt;...&lt;/tr&gt;
-&lt;tr class="warning"&gt;...&lt;/tr&gt;
-&lt;tr class="danger"&gt;...&lt;/tr&gt;
-&lt;tr class="info"&gt;...&lt;/tr&gt;
-
-&lt;!-- On cells (`td` or `th`) --&gt;
-&lt;tr&gt;
-  &lt;td class="active"&gt;...&lt;/td&gt;
-  &lt;td class="success"&gt;...&lt;/td&gt;
-  &lt;td class="warning"&gt;...&lt;/td&gt;
-  &lt;td class="danger"&gt;...&lt;/td&gt;
-  &lt;td class="info"&gt;...&lt;/td&gt;
-&lt;/tr&gt;
-</code></pre></div></div>
-<p><br /></p>
-
-<h2 id="폼태그-스타일">폼태그 스타일</h2>
-<hr />
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>form.form-inline
-	div.form-group.has-success.has-feedback
-		div.input-group
-			span.input-group-addon
-				span.glyphicon glyphicon-*(들어가 이미지 명)
-			input.form-control
-</code></pre></div></div>
-
-<p><strong>form-inline</strong> : 폼의 요소들을 한줄로 정
-<strong>form-horizontal</strong> : 폼의 요소들을 수평으로 정렬
-<strong>form-group</strong> : form태그 안의 최적의 여백을 위해
-<strong>input-control</strong> : 조작하고싶은 요소
-<strong>control-label</strong> : 레이블테그가 form-group이 가지고있는 스타일을 따라
-<strong>has-스타일이름</strong> : 입력창에 스타일을 줌
-<strong>input-group</strong> : 인풋 테그 스타일을 줌
-<strong>input-group-addon</strong> : 인풋 태그에 보조아이콘 추</p>
-
 
 
         <hr>
@@ -233,8 +162,11 @@ th 	//table header
         <div class="clearfix">
 
           
+          <a class="btn btn-primary float-left" href="/2017/01/07/singleton.html" data-toggle="tooltip" data-placement="top" title="Singleton Pattern">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
           
-          <a class="btn btn-primary float-right" href="/2016/01/04/grid_optoin.html" data-toggle="tooltip" data-placement="top" title="Grid Option">Next<span class="d-none d-md-inline">
+          
+          <a class="btn btn-primary float-right" href="/2017/01/09/abstract_factory.html" data-toggle="tooltip" data-placement="top" title="Abstract Factory Pattern">Next<span class="d-none d-md-inline">
               Post</span> &rarr;</a>
           
 
