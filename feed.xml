@@ -1,4 +1,128 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://hayagou.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hayagou.github.io/" rel="alternate" type="text/html" /><updated>2020-02-16T01:53:50+09:00</updated><id>https://hayagou.github.io/feed.xml</id><title type="html">Hayagou</title><author><name>hayagou</name></author><entry><title type="html">IntelliJ에서 Gradle로 자바 프로젝트 만들기</title><link href="https://hayagou.github.io/2019/02/02/gradle.html" rel="alternate" type="text/html" title="IntelliJ에서 Gradle로 자바 프로젝트 만들기" /><published>2019-02-02T08:45:13+09:00</published><updated>2019-02-02T08:45:13+09:00</updated><id>https://hayagou.github.io/2019/02/02/gradle</id><content type="html" xml:base="https://hayagou.github.io/2019/02/02/gradle.html">&lt;h1 id=&quot;gradle-build-tool&quot;&gt;Gradle Build Tool&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://hayagou.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hayagou.github.io/" rel="alternate" type="text/html" /><updated>2020-02-22T22:21:13+09:00</updated><id>https://hayagou.github.io/feed.xml</id><title type="html">Hayagou</title><author><name>hayagou</name></author><entry><title type="html">ANN 인공신경망</title><link href="https://hayagou.github.io/2019/03/01/ANN.html" rel="alternate" type="text/html" title="ANN 인공신경망" /><published>2019-03-01T21:45:13+09:00</published><updated>2019-03-01T21:45:13+09:00</updated><id>https://hayagou.github.io/2019/03/01/ANN</id><content type="html" xml:base="https://hayagou.github.io/2019/03/01/ANN.html">&lt;h1 id=&quot;인공지능-annartifical-neural-network&quot;&gt;[인공지능] ANN(Artifical Neural Network)&lt;/h1&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;배경&quot;&gt;배경&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;생리학자인 워렌 매컬록 (Warren McCulloch)과 수학자 월터 피트 (Walter Pitts)에 의해 1943년에 처음 소개
+생물학적 뉴런이 동물 두뇌에서 어떻게 작동해서 명제 논리를 사용한 복잡한 계산을 수행하는 지를 모델링하기 위해 제안&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;인공-뉴런-artificial-neuron&quot;&gt;인공 뉴런 (Artificial Neuron)&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/image2.png&quot; alt=&quot;gradle&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;생물학적 뉴런의 기능을 단순화해서 소프트웨어로 구현한 것&lt;/li&gt;
+  &lt;li&gt;n개의 입력을 받고, 각각의 입력에 가중치를 곱한 후 이의 합을 구하고, 이 합에 간단한 함수를 적용하여 값을 출력&lt;/li&gt;
+  &lt;li&gt;결과 값이 다시 다른 뉴런의 입력으로 전달&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;퍼셉트론-perceptron&quot;&gt;퍼셉트론 (Perceptron)&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/image3.png&quot; alt=&quot;gradle&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;가장 단순한 ANN 아키텍처 중 하나로 Frank Rosenblatt가 1957년에 발명&lt;/li&gt;
+  &lt;li&gt;워렌 매컬록과 월터 피트가 제안한 모델과는 약간 다른 인공 뉴런을 사용&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/image7.png&quot; alt=&quot;gradle&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;위 그림은 두 개의 입력을 받아 3 개의 출력을 내는 퍼셉트론 구조로,
+입력 뉴런은 특수한 뉴런으로 입력 값을 그대로 통과시키는 역할
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;퍼셉트론은 그림과 같이 입력 층과 여러 개의 LTU(Linear Threshold Unit)로 구성된 단일 층으로 구성&lt;/li&gt;
+  &lt;li&gt;출력은 아래와 같이 바이어스를 고려하여 입력들의 가중치 합이 일정 임계치 이상이며 1이고, 그렇지 않으면 0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/image6.gif&quot; alt=&quot;gradle&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/image9.png&quot; alt=&quot;gradle&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;아래와 같이 재구성&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/image6.gif&quot; alt=&quot;gradle&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;임계값을 입력 값이 항상 1이고, 가중치가 -Θ인 입력 뉴런으로 표현
+이렇게 되면 학습 데이터에 내재된 바이어스를 자동으로 학습
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;딥러닝-학습이란&quot;&gt;딥러닝 학습이란?&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;주어진 입력에 대해 원하는 출력 (목표치)이 나오도록 하는 가중치를 자동으로 찾는 작업 또는 과정&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/image100.png&quot; alt=&quot;gradle&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;아래의 학습 규칙에 따라 가중치 조절&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/image10.gif&quot; alt=&quot;gradle&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;실제 출력과 목표치와의 차이, 즉 오차에 입력 값을 곱한 값만큼 변경&lt;/li&gt;
+  &lt;li&gt;오차가 음수이면 출력 값을 현재보다 작게 하기 위해 가중치를 감소&lt;/li&gt;
+  &lt;li&gt;반대로 오차가 양수이면 출력 값을 현재보다 크게 하기 위해 가중치를 증가&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;학습율-학습-속도-제어&quot;&gt;학습율, 학습 속도 제어&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/image11.png&quot; alt=&quot;gradle&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;학습율이 너무 낮으면 알고리즘이 최적의 솔루션 (지역 최적의 솔루션 포함)에 도달하지만 시간이 오래 걸림&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/image12.png&quot; alt=&quot;gradle&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;반대로 너무 높으면 알고리즘이 발산하여 최적의 솔루션을 찾을 수가 없음&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+-&amp;gt; 학습율에 대한 한 가지 해결책은 초반에는 학습율을 크게해서 학습 속도가 빠르게 진행되게 하고, 점차 학습율을 줄여 끝으로 갈수록 천천히 변하도록&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;학습-모드와-테스트-모드&quot;&gt;학습 모드와 테스트 모드&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;신경망은 두 가지 모드로 동작하는데, 하나는 학습 모드이고, 다른 하나는 사용 모드 (또는 테스트 모드)&lt;/li&gt;
+  &lt;li&gt;보통 데이터의 80%를 훈련에 사용하고 20%는 테스트용으로 사용&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;실습-iris-데이터-셋에-퍼셉트론-적용하기&quot;&gt;[실습] Iris 데이터 셋에 퍼셉트론 적용하기&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Scikit-Learn 라이브러리의 Perceptron 클래스를 사용하여 실습을 해봄&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">[인공지능] ANN(Artifical Neural Network)</summary></entry><entry><title type="html">IntelliJ에서 Gradle로 자바 프로젝트 만들기</title><link href="https://hayagou.github.io/2019/02/02/gradle.html" rel="alternate" type="text/html" title="IntelliJ에서 Gradle로 자바 프로젝트 만들기" /><published>2019-02-02T08:45:13+09:00</published><updated>2019-02-02T08:45:13+09:00</updated><id>https://hayagou.github.io/2019/02/02/gradle</id><content type="html" xml:base="https://hayagou.github.io/2019/02/02/gradle.html">&lt;h1 id=&quot;gradle-build-tool&quot;&gt;Gradle Build Tool&lt;/h1&gt;
 &lt;hr /&gt;
 
 &lt;h2 id=&quot;gradle-wrapper란&quot;&gt;Gradle Wrapper란?&lt;/h2&gt;
@@ -348,24 +472,4 @@ NetworkParameters 라는 객체를 사용하여 네트워크 설정을 한다. �
 
 &lt;p&gt;&lt;img src=&quot;/img/posts/ds/adapter.png&quot; alt=&quot;adapter 패턴&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/ds/adapter1.png&quot; alt=&quot;adapter 패턴&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] Adapter Pattern</summary></entry><entry><title type="html">Abstract Factory Pattern</title><link href="https://hayagou.github.io/2017/01/09/abstract_factory.html" rel="alternate" type="text/html" title="Abstract Factory Pattern" /><published>2017-01-09T08:45:13+09:00</published><updated>2017-01-09T08:45:13+09:00</updated><id>https://hayagou.github.io/2017/01/09/abstract_factory</id><content type="html" xml:base="https://hayagou.github.io/2017/01/09/abstract_factory.html">&lt;h1 id=&quot;디자인패턴-abstract-factory-pattern&quot;&gt;[디자인패턴] Abstract Factory Pattern&lt;/h1&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;구체적인  클래스에  의존하지  않고  서로  연관되거나  의존적인  객체들의  조합을  만드는  인터페이스를  제공하는 패턴&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;즉, 관련성  있는  여러  종류의  객체를  일관된  방식으로  생성하는  경우에  유용하다.&lt;/li&gt;
-  &lt;li&gt;싱글턴  패턴, 팩토리  메서드  패턴을  사용한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/posts/ds/abstract_factory.png&quot; alt=&quot;abstract_factory&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;역할이--수행하는--작업&quot;&gt;역할이  수행하는  작업&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;AbstractFactory : 실제  팩토리  클래스의  공통  인터페이스&lt;/li&gt;
-  &lt;li&gt;ConcreteFactory : 구체적인  팩토리  클래스로 AbstractFactory 클래스의  추상  메서드를  오버라이드함으로써  구체적인  제품을  생성한다.&lt;/li&gt;
-  &lt;li&gt;AbstractProduct : 제품의  공통  인터페이스&lt;/li&gt;
-  &lt;li&gt;ConcreteProduct : 구체적인  팩토리  클래스에서  생성되는  구체적인  제품&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] Abstract Factory Pattern</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/img/posts/ds/adapter1.png&quot; alt=&quot;adapter 패턴&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] Adapter Pattern</summary></entry></feed>

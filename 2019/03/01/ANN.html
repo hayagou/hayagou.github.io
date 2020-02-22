@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    ANN 인공신경망 - Hayagou
+    
+  </title>
+
+  <meta name="description" content="[인공지능] ANN(Artifical Neural Network)">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://hayagou.github.io/2019/03/01/ANN.html">
+  <link rel="alternate" type="application/rss+xml" title="Hayagou" href="/feed.xml">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158054059-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-158054059-1');
+  </script>
+
+  <script data-ad-client="ca-pub-4295120214669813" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">Hayagou</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/img/bg-post.jpg')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>ANN 인공신경망</h1>
+            
+            <span class="meta">Posted by
+              <a href="#">hayagou</a>
+              on 2019-03-01 &middot; <span class="reading-time" title="Estimated read time">
+  
+   3 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <h1 id="인공지능-annartifical-neural-network">[인공지능] ANN(Artifical Neural Network)</h1>
+
+<p><br /></p>
+
+<h2 id="배경">배경</h2>
+
+<hr />
+
+<p>생리학자인 워렌 매컬록 (Warren McCulloch)과 수학자 월터 피트 (Walter Pitts)에 의해 1943년에 처음 소개
+생물학적 뉴런이 동물 두뇌에서 어떻게 작동해서 명제 논리를 사용한 복잡한 계산을 수행하는 지를 모델링하기 위해 제안</p>
+
+<p><br /></p>
+
+<h2 id="인공-뉴런-artificial-neuron">인공 뉴런 (Artificial Neuron)</h2>
+
+<hr />
+
+<p><img src="/img/posts/ai/image2.png" alt="gradle" class="img-responsive center-block" /></p>
+
+<ul>
+  <li>생물학적 뉴런의 기능을 단순화해서 소프트웨어로 구현한 것</li>
+  <li>n개의 입력을 받고, 각각의 입력에 가중치를 곱한 후 이의 합을 구하고, 이 합에 간단한 함수를 적용하여 값을 출력</li>
+  <li>결과 값이 다시 다른 뉴런의 입력으로 전달</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="퍼셉트론-perceptron">퍼셉트론 (Perceptron)</h2>
+<hr />
+
+<p><img src="/img/posts/ai/image3.png" alt="gradle" class="img-responsive center-block" /></p>
+
+<ul>
+  <li>가장 단순한 ANN 아키텍처 중 하나로 Frank Rosenblatt가 1957년에 발명</li>
+  <li>워렌 매컬록과 월터 피트가 제안한 모델과는 약간 다른 인공 뉴런을 사용</li>
+</ul>
+
+<p><br /></p>
+
+<p><img src="/img/posts/ai/image7.png" alt="gradle" class="img-responsive center-block" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>위 그림은 두 개의 입력을 받아 3 개의 출력을 내는 퍼셉트론 구조로,
+입력 뉴런은 특수한 뉴런으로 입력 값을 그대로 통과시키는 역할
+</code></pre></div></div>
+
+<ul>
+  <li>퍼셉트론은 그림과 같이 입력 층과 여러 개의 LTU(Linear Threshold Unit)로 구성된 단일 층으로 구성</li>
+  <li>출력은 아래와 같이 바이어스를 고려하여 입력들의 가중치 합이 일정 임계치 이상이며 1이고, 그렇지 않으면 0</li>
+</ul>
+
+<p><img src="/img/posts/ai/image6.gif" alt="gradle" class="img-responsive center-block" /></p>
+
+<p><br /></p>
+
+<p><img src="/img/posts/ai/image9.png" alt="gradle" class="img-responsive center-block" /></p>
+
+<ul>
+  <li>아래와 같이 재구성</li>
+</ul>
+
+<p><img src="/img/posts/ai/image6.gif" alt="gradle" class="img-responsive center-block" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>임계값을 입력 값이 항상 1이고, 가중치가 -Θ인 입력 뉴런으로 표현
+이렇게 되면 학습 데이터에 내재된 바이어스를 자동으로 학습
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="딥러닝-학습이란">딥러닝 학습이란?</h2>
+
+<hr />
+
+<p>주어진 입력에 대해 원하는 출력 (목표치)이 나오도록 하는 가중치를 자동으로 찾는 작업 또는 과정</p>
+
+<p><img src="/img/posts/ai/image100.png" alt="gradle" class="img-responsive center-block" /></p>
+
+<ul>
+  <li>아래의 학습 규칙에 따라 가중치 조절</li>
+</ul>
+
+<p><img src="/img/posts/ai/image10.gif" alt="gradle" class="img-responsive center-block" /></p>
+
+<ul>
+  <li>실제 출력과 목표치와의 차이, 즉 오차에 입력 값을 곱한 값만큼 변경</li>
+  <li>오차가 음수이면 출력 값을 현재보다 작게 하기 위해 가중치를 감소</li>
+  <li>반대로 오차가 양수이면 출력 값을 현재보다 크게 하기 위해 가중치를 증가</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="학습율-학습-속도-제어">학습율, 학습 속도 제어</h2>
+
+<hr />
+
+<p><img src="/img/posts/ai/image11.png" alt="gradle" class="img-responsive center-block" /></p>
+
+<p>학습율이 너무 낮으면 알고리즘이 최적의 솔루션 (지역 최적의 솔루션 포함)에 도달하지만 시간이 오래 걸림</p>
+
+<p><br /></p>
+
+<p><img src="/img/posts/ai/image12.png" alt="gradle" class="img-responsive center-block" /></p>
+
+<p>반대로 너무 높으면 알고리즘이 발산하여 최적의 솔루션을 찾을 수가 없음</p>
+
+<p><br />
+-&gt; 학습율에 대한 한 가지 해결책은 초반에는 학습율을 크게해서 학습 속도가 빠르게 진행되게 하고, 점차 학습율을 줄여 끝으로 갈수록 천천히 변하도록</p>
+
+<p><br /></p>
+
+<h2 id="학습-모드와-테스트-모드">학습 모드와 테스트 모드</h2>
+
+<hr />
+
+<ul>
+  <li>신경망은 두 가지 모드로 동작하는데, 하나는 학습 모드이고, 다른 하나는 사용 모드 (또는 테스트 모드)</li>
+  <li>보통 데이터의 80%를 훈련에 사용하고 20%는 테스트용으로 사용</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="실습-iris-데이터-셋에-퍼셉트론-적용하기">[실습] Iris 데이터 셋에 퍼셉트론 적용하기</h2>
+
+<hr />
+
+<p>Scikit-Learn 라이브러리의 Perceptron 클래스를 사용하여 실습을 해봄</p>
+
+
+
+        <hr>
+
+        
+        <div id="disqus_thread"></div>
+        <script>
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://hayagou-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+        <hr>
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/2019/02/02/gradle.html" data-toggle="tooltip" data-placement="top" title="IntelliJ에서 Gradle로 자바 프로젝트 만들기">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:de0978@gmail.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/hayagou">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; hayagou 2020</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158054059-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158054059-1');
+</script>
+
+
+
+</body>
+
+</html>
