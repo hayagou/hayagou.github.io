@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://hayagou.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hayagou.github.io/" rel="alternate" type="text/html" /><updated>2020-02-22T22:21:13+09:00</updated><id>https://hayagou.github.io/feed.xml</id><title type="html">Hayagou</title><author><name>hayagou</name></author><entry><title type="html">ANN 인공신경망</title><link href="https://hayagou.github.io/2019/03/01/ANN.html" rel="alternate" type="text/html" title="ANN 인공신경망" /><published>2019-03-01T21:45:13+09:00</published><updated>2019-03-01T21:45:13+09:00</updated><id>https://hayagou.github.io/2019/03/01/ANN</id><content type="html" xml:base="https://hayagou.github.io/2019/03/01/ANN.html">&lt;h1 id=&quot;인공지능-annartifical-neural-network&quot;&gt;[인공지능] ANN(Artifical Neural Network)&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://hayagou.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hayagou.github.io/" rel="alternate" type="text/html" /><updated>2020-02-23T02:24:21+09:00</updated><id>https://hayagou.github.io/feed.xml</id><title type="html">Hayagou</title><author><name>hayagou</name></author><entry><title type="html">ANN 인공신경망</title><link href="https://hayagou.github.io/2019/03/01/ANN.html" rel="alternate" type="text/html" title="ANN 인공신경망" /><published>2019-03-01T21:45:13+09:00</published><updated>2019-03-01T21:45:13+09:00</updated><id>https://hayagou.github.io/2019/03/01/ANN</id><content type="html" xml:base="https://hayagou.github.io/2019/03/01/ANN.html">&lt;h1 id=&quot;인공지능-annartifical-neural-network&quot;&gt;[인공지능] ANN(Artifical Neural Network)&lt;/h1&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -15,7 +15,7 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/ai/image2.png&quot; alt=&quot;gradle&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/ann2.png&quot; alt=&quot;ai&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;생물학적 뉴런의 기능을 단순화해서 소프트웨어로 구현한 것&lt;/li&gt;
@@ -28,7 +28,7 @@
 &lt;h2 id=&quot;퍼셉트론-perceptron&quot;&gt;퍼셉트론 (Perceptron)&lt;/h2&gt;
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/ai/image3.png&quot; alt=&quot;gradle&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/ann3.png&quot; alt=&quot;ai&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;가장 단순한 ANN 아키텍처 중 하나로 Frank Rosenblatt가 1957년에 발명&lt;/li&gt;
@@ -37,7 +37,7 @@
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/ai/image7.png&quot; alt=&quot;gradle&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/ann7.png&quot; alt=&quot;ai&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;위 그림은 두 개의 입력을 받아 3 개의 출력을 내는 퍼셉트론 구조로,
 입력 뉴런은 특수한 뉴런으로 입력 값을 그대로 통과시키는 역할
@@ -48,17 +48,17 @@
   &lt;li&gt;출력은 아래와 같이 바이어스를 고려하여 입력들의 가중치 합이 일정 임계치 이상이며 1이고, 그렇지 않으면 0&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/ai/image6.gif&quot; alt=&quot;gradle&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/ann6.gif&quot; alt=&quot;ai&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/ai/image9.png&quot; alt=&quot;gradle&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/ann9.png&quot; alt=&quot;ai&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;아래와 같이 재구성&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/ai/image6.gif&quot; alt=&quot;gradle&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/ann6.gif&quot; alt=&quot;ai&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;임계값을 입력 값이 항상 1이고, 가중치가 -Θ인 입력 뉴런으로 표현
 이렇게 되면 학습 데이터에 내재된 바이어스를 자동으로 학습
@@ -72,13 +72,13 @@
 
 &lt;p&gt;주어진 입력에 대해 원하는 출력 (목표치)이 나오도록 하는 가중치를 자동으로 찾는 작업 또는 과정&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/ai/image100.png&quot; alt=&quot;gradle&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/ann100.png&quot; alt=&quot;ai&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;아래의 학습 규칙에 따라 가중치 조절&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/ai/image10.gif&quot; alt=&quot;gradle&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/ann10.gif&quot; alt=&quot;ai&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;실제 출력과 목표치와의 차이, 즉 오차에 입력 값을 곱한 값만큼 변경&lt;/li&gt;
@@ -92,13 +92,13 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/ai/image11.png&quot; alt=&quot;gradle&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/ann11.png&quot; alt=&quot;ai&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;학습율이 너무 낮으면 알고리즘이 최적의 솔루션 (지역 최적의 솔루션 포함)에 도달하지만 시간이 오래 걸림&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/ai/image12.png&quot; alt=&quot;gradle&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/ann12.png&quot; alt=&quot;ai&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;반대로 너무 높으면 알고리즘이 발산하여 최적의 솔루션을 찾을 수가 없음&lt;/p&gt;
 
