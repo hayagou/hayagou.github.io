@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://hayagou.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hayagou.github.io/" rel="alternate" type="text/html" /><updated>2020-02-23T02:24:21+09:00</updated><id>https://hayagou.github.io/feed.xml</id><title type="html">Hayagou</title><author><name>hayagou</name></author><entry><title type="html">ANN 인공신경망</title><link href="https://hayagou.github.io/2019/03/01/ANN.html" rel="alternate" type="text/html" title="ANN 인공신경망" /><published>2019-03-01T21:45:13+09:00</published><updated>2019-03-01T21:45:13+09:00</updated><id>https://hayagou.github.io/2019/03/01/ANN</id><content type="html" xml:base="https://hayagou.github.io/2019/03/01/ANN.html">&lt;h1 id=&quot;인공지능-annartifical-neural-network&quot;&gt;[인공지능] ANN(Artifical Neural Network)&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://hayagou.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hayagou.github.io/" rel="alternate" type="text/html" /><updated>2020-02-23T02:27:34+09:00</updated><id>https://hayagou.github.io/feed.xml</id><title type="html">Hayagou</title><author><name>hayagou</name></author><entry><title type="html">ANN 인공신경망</title><link href="https://hayagou.github.io/2019/03/01/ANN.html" rel="alternate" type="text/html" title="ANN 인공신경망" /><published>2019-03-01T21:45:13+09:00</published><updated>2019-03-01T21:45:13+09:00</updated><id>https://hayagou.github.io/2019/03/01/ANN</id><content type="html" xml:base="https://hayagou.github.io/2019/03/01/ANN.html">&lt;h1 id=&quot;인공지능-annartifical-neural-network&quot;&gt;[인공지능] ANN(Artifical Neural Network)&lt;/h1&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -15,7 +15,7 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/ai/ann2.png&quot; alt=&quot;ai&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/ai/imgann2.png&quot; alt=&quot;ai&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;생물학적 뉴런의 기능을 단순화해서 소프트웨어로 구현한 것&lt;/li&gt;
