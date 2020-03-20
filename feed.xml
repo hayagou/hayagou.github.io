@@ -1,4 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://hayagou.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hayagou.github.io/" rel="alternate" type="text/html" /><updated>2020-02-23T02:30:41+09:00</updated><id>https://hayagou.github.io/feed.xml</id><title type="html">Hayagou</title><author><name>hayagou</name></author><entry><title type="html">ANN 인공신경망</title><link href="https://hayagou.github.io/2019/03/01/ANN.html" rel="alternate" type="text/html" title="ANN 인공신경망" /><published>2019-03-01T21:45:13+09:00</published><updated>2019-03-01T21:45:13+09:00</updated><id>https://hayagou.github.io/2019/03/01/ANN</id><content type="html" xml:base="https://hayagou.github.io/2019/03/01/ANN.html">&lt;h1 id=&quot;인공지능-annartifical-neural-network&quot;&gt;[인공지능] ANN(Artifical Neural Network)&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://hayagou.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hayagou.github.io/" rel="alternate" type="text/html" /><updated>2020-03-20T22:54:21+09:00</updated><id>https://hayagou.github.io/feed.xml</id><title type="html">Hayagou</title><author><name>hayagou</name></author><entry><title type="html">Web</title><link href="https://hayagou.github.io/2020/03/01/web.html" rel="alternate" type="text/html" title="Web" /><published>2020-03-01T21:45:13+09:00</published><updated>2020-03-01T21:45:13+09:00</updated><id>https://hayagou.github.io/2020/03/01/web</id><content type="html" xml:base="https://hayagou.github.io/2020/03/01/web.html">&lt;h1 id=&quot;고급웹프로그래밍-1주차&quot;&gt;[고급웹프로그래밍] 1주차&lt;/h1&gt;
+
+&lt;p&gt;웹 개발은 프론트 엔드와 백엔드로 나눌수 있다. 두개를 합쳐서 풀스택 개발자라고 한다.&lt;/p&gt;
+
+&lt;p&gt;프론트도 두개로 나눌수 있다
+웹 퍼블리셔와 동적인 인것을 담당 하는 프론트엔드 개발자라고 한다.&lt;/p&gt;
+
+&lt;p&gt;서버프로그래밍에는
+LAMP, WISA MEAN, JAVA 스택이 있다.&lt;/p&gt;
+
+&lt;p&gt;목표 : 팀프로젝트수업을 관리하는 웹어플리케이션
+팀정하기
+팀원이 얼마나 진도가 나갔는지
+팀원이 무임승차를 하고있지 않는지
+교수와 유기적인 상호작용이 가능한지&lt;/p&gt;
+
+&lt;h2 id=&quot;bootstrap&quot;&gt;BootStrap&lt;/h2&gt;
+
+&lt;p&gt;css와 javascript를 편리하게사용할수있게 만든 프레임 워크이다.&lt;/p&gt;
+
+&lt;p&gt;부트스트랩을 다운로드 받는 방법은
+다운로드 받는방법
+cdn&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">[고급웹프로그래밍] 1주차</summary></entry><entry><title type="html">안드로이드 스튜디오 설치</title><link href="https://hayagou.github.io/2019/12/02/mobile.html" rel="alternate" type="text/html" title="안드로이드 스튜디오 설치" /><published>2019-12-02T00:45:13+09:00</published><updated>2019-12-02T00:45:13+09:00</updated><id>https://hayagou.github.io/2019/12/02/mobile</id><content type="html" xml:base="https://hayagou.github.io/2019/12/02/mobile.html">&lt;h1 id=&quot;모바일-프로그래밍-안드로이드-스튜디오-설치하기-for-mac&quot;&gt;[모바일 프로그래밍] 안드로이드 스튜디오 설치하기 for mac&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.android.com/studio?hl=ko&quot;&gt;안드로이드 공식 홈페이지 &lt;/a&gt; 에 접속후,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/mobile/and1.png&quot; alt=&quot;and1&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;DOWNLOAD ANDROID STUDIO 버튼을 클릭하여 설치하려는 OS에 맞는 설치파일이 다운로드 된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/mobile/and2.png&quot; alt=&quot;and2&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;설치파일을 응용프로그램으로 옮기면 OS에 설치가 된다.&lt;/p&gt;
+
+&lt;p&gt;안드로이드 스튜디오를 실행하면&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/mobile/and3.png&quot; alt=&quot;and2&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이런 화면이 뜬다.
+작업 경로를 설정하는것인데 처음 설치하기 때문에 디폴트 값으로 설정하고 넘어간다&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/mobile/and4.png&quot; alt=&quot;and2&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;설치 마법사가 실행되면 NEXT를 눌러준다&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/mobile/and5.png&quot; alt=&quot;and2&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;안드로이드 스튜디오 설치할 옵션을 기본으로 설정후 다음을 누른다&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/mobile/and6.png&quot; alt=&quot;and2&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;사용하고 싶은 UI를 선택한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/mobile/and7.png&quot; alt=&quot;and2&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Finish를 눌러 설치를 진행한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/mobile/and8.png&quot; alt=&quot;and2&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;필요한 파일들이 설치되는 중이다…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/mobile/and9.png&quot; alt=&quot;and2&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;설치가 정상적으로 된다면 이런 화면이 된다.&lt;/p&gt;
+
+&lt;h2 id=&quot;helloworld-찍어보기&quot;&gt;HelloWorld 찍어보기&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/mobile/and10.png&quot; alt=&quot;and2&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;안드로이드 스튜디로를 실행하여 새로운 프로젝트를 생성한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/mobile/and11.png&quot; alt=&quot;and2&quot; class=&quot;img-responsive center-block&quot; /&gt;
+빈프로젝트로 생성 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/mobile/and12.png&quot; alt=&quot;and2&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;프로젝트 명과 패키지를 설정하고 개발할 언어를 설정한다.
+개발한 언어는 자바로 설정하나 코틀린으로 설정하나 별 차이가 없다.&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">[모바일 프로그래밍] 안드로이드 스튜디오 설치하기 for mac</summary></entry><entry><title type="html">ANN 인공신경망</title><link href="https://hayagou.github.io/2019/03/01/ANN.html" rel="alternate" type="text/html" title="ANN 인공신경망" /><published>2019-03-01T21:45:13+09:00</published><updated>2019-03-01T21:45:13+09:00</updated><id>https://hayagou.github.io/2019/03/01/ANN</id><content type="html" xml:base="https://hayagou.github.io/2019/03/01/ANN.html">&lt;h1 id=&quot;인공지능-annartifical-neural-network&quot;&gt;[인공지능] ANN(Artifical Neural Network)&lt;/h1&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -450,26 +527,4 @@ NetworkParameters 라는 객체를 사용하여 네트워크 설정을 한다. �
 &lt;ul&gt;
   &lt;li&gt;AbstractClass : 템플릿  메서드를  정의하는  클래스, 하위  클래스에  공통  알고리즘을  정의하고  하위  클래스에서  구현될  기능을 primitive 메서드  또는 hook 메서드로  정의하는  클래스&lt;/li&gt;
   &lt;li&gt;ConcreteClass : 물려받은 primitive 메서드  또는 hook 메서드를  구현하는  클래스 ,상위  클래스에  구현된  템플릿  메서드의  일반적인  알고리즘에서  하위  클래스에  적합하게 primitive 메서드나 hook 메서드를  오버라이드하는  클래스&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] Template Method Pattern</summary></entry><entry><title type="html">Facade Pattern</title><link href="https://hayagou.github.io/2017/01/11/facade.html" rel="alternate" type="text/html" title="Facade Pattern" /><published>2017-01-11T08:45:13+09:00</published><updated>2017-01-11T08:45:13+09:00</updated><id>https://hayagou.github.io/2017/01/11/facade</id><content type="html" xml:base="https://hayagou.github.io/2017/01/11/facade.html">&lt;h1 id=&quot;디자인패턴-facade-pattern&quot;&gt;[디자인패턴] Facade Pattern&lt;/h1&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;어떤 서브시스템의 일련의 인터페이스에 대한 통합된 인터페이스를 제공한다.&lt;/li&gt;
-  &lt;li&gt;퍼사드에서 고수준 인터페이스를 정의하기 때문에 서브시스템을 더 쉽게 사용할수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/posts/ds/facade.png&quot; alt=&quot;facade 패턴&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/posts/ds/facade1.png&quot; alt=&quot;facade 패턴&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] Facade Pattern</summary></entry><entry><title type="html">Adapter Pattern</title><link href="https://hayagou.github.io/2017/01/10/adaptor.html" rel="alternate" type="text/html" title="Adapter Pattern" /><published>2017-01-10T08:45:13+09:00</published><updated>2017-01-10T08:45:13+09:00</updated><id>https://hayagou.github.io/2017/01/10/adaptor</id><content type="html" xml:base="https://hayagou.github.io/2017/01/10/adaptor.html">&lt;h1 id=&quot;디자인패턴-adapter-pattern&quot;&gt;[디자인패턴] Adapter Pattern&lt;/h1&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;adapter pattern은 관계가 없는 인터페이스들이 같이 일할 수 있도록 도와주는 디자인 패턴이다.&lt;/li&gt;
-  &lt;li&gt;2가지 방법 : OBJECT adapter pattern (구성),  CLASS adapter pattern(다중 상속)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/posts/ds/adapter.png&quot; alt=&quot;adapter 패턴&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/posts/ds/adapter1.png&quot; alt=&quot;adapter 패턴&quot; class=&quot;img-responsive center-block&quot; /&gt;&lt;/p&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] Adapter Pattern</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>hayagou</name></author><summary type="html">[디자인패턴] Template Method Pattern</summary></entry></feed>
