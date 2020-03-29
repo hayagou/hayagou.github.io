@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    Posts - Hayagou
+    Composite Pattern - Hayagou
     
   </title>
 
-  <meta name="description" content="">
+  <meta name="description" content="[디자인패턴] Composite Pattern">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="https://hayagou.github.io/posts/page2/">
+  <link rel="canonical" href="https://hayagou.github.io/web/2017/01/05/img.html">
   <link rel="alternate" type="application/rss+xml" title="Hayagou" href="/feed.xml">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -176,9 +176,16 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>Posts</h1>
+          <div class="post-heading">
+            <h1>Composite Pattern</h1>
             
+            <span class="meta">Posted by
+              <a href="#">hayagou</a>
+              on 2017-01-05 &middot; <span class="reading-time" title="Estimated read time">
+  
+   1 min  read </span>
+
+            </span>
           </div>
         </div>
       </div>
@@ -189,154 +196,63 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
+        <h1 id="디자인패턴-composite-pattern">[디자인패턴] Composite Pattern</h1>
+
+<blockquote>
+  <p>여러  개의  객체들로  구성된  복합  객체와  단일  객체를  클라이언트에서  구별  없이  다루게  해주는  패턴</p>
+</blockquote>
+
+<ul>
+  <li><strong>전체</strong>-<strong>부분의</strong>  <strong>관계</strong>(Ex. Directory-File)<strong>를</strong>  <strong>갖는</strong>  <strong>객체</strong>들  사이의  관계를  정의할  때  유용하다.</li>
+  <li>클라이언트는  전체와  부분을  구분하지  않고  동일한  <strong>인터페이스</strong>를  사용할  수  있다.</li>
+</ul>
+
+<p><img src="/img/posts/ds/composite.png" alt="Composite" class="img-responsive center-block" /></p>
+
+<ul>
+  <li>
+    <p>역할이  수행하는  작업</p>
+
+    <ul>
+      <li>Componet : 구체적인  부분, 즉 Leaf 클래스와  전체에  해당하는 Composite 클래스에  공통  인터페이스를  정의</li>
+      <li>Leaf : 구체적인  부분  클래스, 즉 Leaf 클래스와  전체에  해당하는 Composite 클래스에  공통  인터페이스를  정의</li>
+      <li>Composite : 전체  클래스, 복수  개의 Component를  갖도록  정의, 그러므로  복수  개의 Leaf, 심지어  복수  개의 Composite 객체를  부분으로  가질  수  있음</li>
+    </ul>
+  </li>
+</ul>
+
+
+
+        <hr>
+
         
+        <div id="disqus_thread"></div>
+        <script>
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://hayagou-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+        <hr>
+        <div class="clearfix">
 
-<article class="post-preview">
-  <a href="/designpatterns/2017/01/16/command.html">
-    <h2 class="post-title">Command Pattern</h2>
-    
-    <h3 class="post-subtitle">[디자인패턴] Comand Pattern
+          
+          <a class="btn btn-primary float-left" href="/designpatterns/2017/01/04/Observer_%E1%84%91%E1%85%A2%E1%84%90%E1%85%A5%E1%86%AB.html" data-toggle="tooltip" data-placement="top" title="Observer 패턴">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/designpatterns/2017/01/06/decorator.html" data-toggle="tooltip" data-placement="top" title="Decorator Pattern">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
 
-
-</h3>
-    
-  </a>
-  <p class="post-meta">Posted by
-    
-    hayagou
-    
-    on January 16, 2017 &middot; <span class="reading-time" title="Estimated read time">
-  
-   1 min  read </span>
-
-  </p>
-</article>
-
-<hr>
-
-
-
-<article class="post-preview">
-  <a href="/designpatterns/2017/01/15/iterator.html">
-    <h2 class="post-title">Iterator Pattern</h2>
-    
-    <h3 class="post-subtitle">[디자인패턴] Iterator Pattern
-
-
-</h3>
-    
-  </a>
-  <p class="post-meta">Posted by
-    
-    hayagou
-    
-    on January 15, 2017 &middot; <span class="reading-time" title="Estimated read time">
-  
-   1 min  read </span>
-
-  </p>
-</article>
-
-<hr>
-
-
-
-<article class="post-preview">
-  <a href="/designpatterns/2017/01/14/proxy.html">
-    <h2 class="post-title">Proxy Pattern</h2>
-    
-    <h3 class="post-subtitle">[디자인패턴] Proxy Pattern
-
-
-</h3>
-    
-  </a>
-  <p class="post-meta">Posted by
-    
-    hayagou
-    
-    on January 14, 2017 &middot; <span class="reading-time" title="Estimated read time">
-  
-   1 min  read </span>
-
-  </p>
-</article>
-
-<hr>
-
-
-
-<article class="post-preview">
-  <a href="/designpatterns/2017/01/13/state.html">
-    <h2 class="post-title">State Pattern</h2>
-    
-    <h3 class="post-subtitle">[디자인패턴] State Pattern
-
-</h3>
-    
-  </a>
-  <p class="post-meta">Posted by
-    
-    hayagou
-    
-    on January 13, 2017 &middot; <span class="reading-time" title="Estimated read time">
-  
-   1 min  read </span>
-
-  </p>
-</article>
-
-<hr>
-
-
-
-<article class="post-preview">
-  <a href="/designpatterns/2017/01/12/template_method.html">
-    <h2 class="post-title">Template Method Pattern</h2>
-    
-    <h3 class="post-subtitle">[디자인패턴] Template Method Pattern
-
-
-</h3>
-    
-  </a>
-  <p class="post-meta">Posted by
-    
-    hayagou
-    
-    on January 12, 2017 &middot; <span class="reading-time" title="Estimated read time">
-  
-   1 min  read </span>
-
-  </p>
-</article>
-
-<hr>
-
-
-
-<!-- Pager -->
-
-
-<div class="clearfix">
-
-  
-  <a class="btn btn-primary float-left" href="/posts/">&larr;
-    Newer<span class="d-none d-md-inline"> Posts</span></a>
-  
-
-  
-  <a class="btn btn-primary float-right" href="/posts/page3/">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
-  
-
-</div>
-
-
-
+        </div>
 
       </div>
     </div>
-  
   </div>
 
 

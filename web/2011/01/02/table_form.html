@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    Posts - Hayagou
+    Table and Form - Hayagou
     
   </title>
 
-  <meta name="description" content="">
+  <meta name="description" content="[부트스트랩] 테이블과 폼 태그 스타일">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="https://hayagou.github.io/posts/page2/">
+  <link rel="canonical" href="https://hayagou.github.io/web/2011/01/02/table_form.html">
   <link rel="alternate" type="application/rss+xml" title="Hayagou" href="/feed.xml">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -176,9 +176,16 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>Posts</h1>
+          <div class="post-heading">
+            <h1>Table and Form</h1>
             
+            <span class="meta">Posted by
+              <a href="#">hayagou</a>
+              on 2011-01-02 &middot; <span class="reading-time" title="Estimated read time">
+  
+   2 mins  read </span>
+
+            </span>
           </div>
         </div>
       </div>
@@ -189,154 +196,154 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
+        <h1 id="부트스트랩-테이블과-폼-태그-스타일">[부트스트랩] 테이블과 폼 태그 스타일</h1>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tr 	//table row, 가로 
+td 	//table data, 세로
+th 	//table header
+</code></pre></div></div>
+
+<p>그리드 레이아웃의 row 를 그대로 적용해서 네이밍 한것
+“td” 가 table col이 아니고 table data인 이유는 데이터가 들어가는 부분이라서</p>
+
+<h2 id="table-class들">Table Class들</h2>
+<hr />
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table class="table"&gt;
+  ...
+&lt;/table&gt;
+</code></pre></div></div>
+
+<p><strong>table.table</strong> : 약간의 패딩과 수평 구분선</p>
+
+<p><strong>table.table-striped</strong> : 줄무늬 행</p>
+
+<p><strong>table.table-striped</strong> : 선있는 테이블</p>
+
+<p><strong>table.table-hover</strong> : 행 hover, 마우스올리면 불들어옴</p>
+
+<p><strong>table.table-condensed</strong> : 좁은폭 테이블</p>
+
+<p><br /></p>
+<hr />
+
+<h2 id="table-row에-효과를-넣고-싶을">Table Row에 효과를 넣고 싶을</h2>
+<hr />
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <colgroup>
+        <col class="col-xs-1" />
+        <col class="col-xs-7" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>클래스</th>
+          <th>설명</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">
+            <code>.active</code>
+          </th>
+          <td>특정한 행이나 셀에 hover 했을 때와 같은 색을 입힙니다.</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <code>.success</code>
+          </th>
+          <td>성공적이거나 긍정적인 액션을 의미합니다.</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <code>.info</code>
+          </th>
+          <td>중립적인 정보의 변화나 액션을 의미합니다.</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <code>.warning</code>
+          </th>
+          <td>주의가 필요한 경고를 의미합니다.</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <code>.danger</code>
+          </th>
+          <td>위험하거나 부정적일수 있는 액션을 의미합니다. </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- On rows --&gt;
+&lt;tr class="active"&gt;...&lt;/tr&gt;
+&lt;tr class="success"&gt;...&lt;/tr&gt;
+&lt;tr class="warning"&gt;...&lt;/tr&gt;
+&lt;tr class="danger"&gt;...&lt;/tr&gt;
+&lt;tr class="info"&gt;...&lt;/tr&gt;
+
+&lt;!-- On cells (`td` or `th`) --&gt;
+&lt;tr&gt;
+  &lt;td class="active"&gt;...&lt;/td&gt;
+  &lt;td class="success"&gt;...&lt;/td&gt;
+  &lt;td class="warning"&gt;...&lt;/td&gt;
+  &lt;td class="danger"&gt;...&lt;/td&gt;
+  &lt;td class="info"&gt;...&lt;/td&gt;
+&lt;/tr&gt;
+</code></pre></div></div>
+<p><br /></p>
+
+<h2 id="폼태그-스타일">폼태그 스타일</h2>
+<hr />
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>form.form-inline
+	div.form-group.has-success.has-feedback
+		div.input-group
+			span.input-group-addon
+				span.glyphicon glyphicon-*(들어가 이미지 명)
+			input.form-control
+</code></pre></div></div>
+
+<p><strong>form-inline</strong> : 폼의 요소들을 한줄로 정
+<strong>form-horizontal</strong> : 폼의 요소들을 수평으로 정렬
+<strong>form-group</strong> : form태그 안의 최적의 여백을 위해
+<strong>input-control</strong> : 조작하고싶은 요소
+<strong>control-label</strong> : 레이블테그가 form-group이 가지고있는 스타일을 따라
+<strong>has-스타일이름</strong> : 입력창에 스타일을 줌
+<strong>input-group</strong> : 인풋 테그 스타일을 줌
+<strong>input-group-addon</strong> : 인풋 태그에 보조아이콘 추</p>
+
+
+
+        <hr>
+
         
+        <div id="disqus_thread"></div>
+        <script>
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://hayagou-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+        <hr>
+        <div class="clearfix">
 
-<article class="post-preview">
-  <a href="/designpatterns/2017/01/16/command.html">
-    <h2 class="post-title">Command Pattern</h2>
-    
-    <h3 class="post-subtitle">[디자인패턴] Comand Pattern
+          
+          
+          <a class="btn btn-primary float-right" href="/web/2016/01/04/grid_optoin.html" data-toggle="tooltip" data-placement="top" title="Grid Option">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
 
-
-</h3>
-    
-  </a>
-  <p class="post-meta">Posted by
-    
-    hayagou
-    
-    on January 16, 2017 &middot; <span class="reading-time" title="Estimated read time">
-  
-   1 min  read </span>
-
-  </p>
-</article>
-
-<hr>
-
-
-
-<article class="post-preview">
-  <a href="/designpatterns/2017/01/15/iterator.html">
-    <h2 class="post-title">Iterator Pattern</h2>
-    
-    <h3 class="post-subtitle">[디자인패턴] Iterator Pattern
-
-
-</h3>
-    
-  </a>
-  <p class="post-meta">Posted by
-    
-    hayagou
-    
-    on January 15, 2017 &middot; <span class="reading-time" title="Estimated read time">
-  
-   1 min  read </span>
-
-  </p>
-</article>
-
-<hr>
-
-
-
-<article class="post-preview">
-  <a href="/designpatterns/2017/01/14/proxy.html">
-    <h2 class="post-title">Proxy Pattern</h2>
-    
-    <h3 class="post-subtitle">[디자인패턴] Proxy Pattern
-
-
-</h3>
-    
-  </a>
-  <p class="post-meta">Posted by
-    
-    hayagou
-    
-    on January 14, 2017 &middot; <span class="reading-time" title="Estimated read time">
-  
-   1 min  read </span>
-
-  </p>
-</article>
-
-<hr>
-
-
-
-<article class="post-preview">
-  <a href="/designpatterns/2017/01/13/state.html">
-    <h2 class="post-title">State Pattern</h2>
-    
-    <h3 class="post-subtitle">[디자인패턴] State Pattern
-
-</h3>
-    
-  </a>
-  <p class="post-meta">Posted by
-    
-    hayagou
-    
-    on January 13, 2017 &middot; <span class="reading-time" title="Estimated read time">
-  
-   1 min  read </span>
-
-  </p>
-</article>
-
-<hr>
-
-
-
-<article class="post-preview">
-  <a href="/designpatterns/2017/01/12/template_method.html">
-    <h2 class="post-title">Template Method Pattern</h2>
-    
-    <h3 class="post-subtitle">[디자인패턴] Template Method Pattern
-
-
-</h3>
-    
-  </a>
-  <p class="post-meta">Posted by
-    
-    hayagou
-    
-    on January 12, 2017 &middot; <span class="reading-time" title="Estimated read time">
-  
-   1 min  read </span>
-
-  </p>
-</article>
-
-<hr>
-
-
-
-<!-- Pager -->
-
-
-<div class="clearfix">
-
-  
-  <a class="btn btn-primary float-left" href="/posts/">&larr;
-    Newer<span class="d-none d-md-inline"> Posts</span></a>
-  
-
-  
-  <a class="btn btn-primary float-right" href="/posts/page3/">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
-  
-
-</div>
-
-
-
+        </div>
 
       </div>
     </div>
-  
   </div>
 
 

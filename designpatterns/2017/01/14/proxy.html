@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    Posts - Hayagou
+    Proxy Pattern - Hayagou
     
   </title>
 
-  <meta name="description" content="">
+  <meta name="description" content="[디자인패턴] Proxy Pattern">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="https://hayagou.github.io/posts/page2/">
+  <link rel="canonical" href="https://hayagou.github.io/designpatterns/2017/01/14/proxy.html">
   <link rel="alternate" type="application/rss+xml" title="Hayagou" href="/feed.xml">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -176,9 +176,16 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>Posts</h1>
+          <div class="post-heading">
+            <h1>Proxy Pattern</h1>
             
+            <span class="meta">Posted by
+              <a href="#">hayagou</a>
+              on 2017-01-14 &middot; <span class="reading-time" title="Estimated read time">
+  
+   1 min  read </span>
+
+            </span>
           </div>
         </div>
       </div>
@@ -189,154 +196,62 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
+        <h1 id="디자인패턴-proxy-pattern">[디자인패턴] Proxy Pattern</h1>
+<hr />
+
+<h2 id="의도">의도</h2>
+<ul>
+  <li>다른 객체에 대한 접근을 제어하기 위한 대리자 또는 자리채움자 역할을 하는 객체를 둠
+= 실제 기능을 수행하는 객체Real Object 대신 가상의 객체Proxy Object를 사용해 로직의 흐름을 제어하는 디자인패턴</li>
+</ul>
+
+<h2 id="특징">특징</h2>
+<ul>
+  <li>원래 하려던 기능을 수행하며 그외의 부가적인 작업(로깅, 인증, 네트워크 통신 등)을 수행하기에 좋음</li>
+  <li>비용이 많이 드는 연산(DB 쿼리, 대용량 텍스트 파일 등)을 실제로 필요한 시점에 수행할 수 있음</li>
+  <li>사용자 입장에서는 프록시 객체나 실제 객체나 사용법은 유사하므로 사용성이 좋음</li>
+</ul>
+
+<p><img src="/img/posts/ds/proxy.png" alt="proxy 패턴" class="img-responsive center-block" /></p>
+
+<h2 id="활용성">활용성</h2>
+<ul>
+  <li>원격지 프록시(remote proxy)</li>
+  <li>가상 프록시(virtual proxy) : 요청이 있을 때만 필요한 고비용 객체를 생성, ex&gt;ImageProxy</li>
+  <li>보호용 프록시(protection proxy):원래 객체에 대한 실제 접근을 제어함,객체별로 접근 제어 권한이 다를 때 유용</li>
+</ul>
+
+
+        <hr>
+
         
+        <div id="disqus_thread"></div>
+        <script>
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://hayagou-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+        <hr>
+        <div class="clearfix">
 
-<article class="post-preview">
-  <a href="/designpatterns/2017/01/16/command.html">
-    <h2 class="post-title">Command Pattern</h2>
-    
-    <h3 class="post-subtitle">[디자인패턴] Comand Pattern
+          
+          <a class="btn btn-primary float-left" href="/designpatterns/2017/01/13/state.html" data-toggle="tooltip" data-placement="top" title="State Pattern">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/designpatterns/2017/01/15/iterator.html" data-toggle="tooltip" data-placement="top" title="Iterator Pattern">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
 
-
-</h3>
-    
-  </a>
-  <p class="post-meta">Posted by
-    
-    hayagou
-    
-    on January 16, 2017 &middot; <span class="reading-time" title="Estimated read time">
-  
-   1 min  read </span>
-
-  </p>
-</article>
-
-<hr>
-
-
-
-<article class="post-preview">
-  <a href="/designpatterns/2017/01/15/iterator.html">
-    <h2 class="post-title">Iterator Pattern</h2>
-    
-    <h3 class="post-subtitle">[디자인패턴] Iterator Pattern
-
-
-</h3>
-    
-  </a>
-  <p class="post-meta">Posted by
-    
-    hayagou
-    
-    on January 15, 2017 &middot; <span class="reading-time" title="Estimated read time">
-  
-   1 min  read </span>
-
-  </p>
-</article>
-
-<hr>
-
-
-
-<article class="post-preview">
-  <a href="/designpatterns/2017/01/14/proxy.html">
-    <h2 class="post-title">Proxy Pattern</h2>
-    
-    <h3 class="post-subtitle">[디자인패턴] Proxy Pattern
-
-
-</h3>
-    
-  </a>
-  <p class="post-meta">Posted by
-    
-    hayagou
-    
-    on January 14, 2017 &middot; <span class="reading-time" title="Estimated read time">
-  
-   1 min  read </span>
-
-  </p>
-</article>
-
-<hr>
-
-
-
-<article class="post-preview">
-  <a href="/designpatterns/2017/01/13/state.html">
-    <h2 class="post-title">State Pattern</h2>
-    
-    <h3 class="post-subtitle">[디자인패턴] State Pattern
-
-</h3>
-    
-  </a>
-  <p class="post-meta">Posted by
-    
-    hayagou
-    
-    on January 13, 2017 &middot; <span class="reading-time" title="Estimated read time">
-  
-   1 min  read </span>
-
-  </p>
-</article>
-
-<hr>
-
-
-
-<article class="post-preview">
-  <a href="/designpatterns/2017/01/12/template_method.html">
-    <h2 class="post-title">Template Method Pattern</h2>
-    
-    <h3 class="post-subtitle">[디자인패턴] Template Method Pattern
-
-
-</h3>
-    
-  </a>
-  <p class="post-meta">Posted by
-    
-    hayagou
-    
-    on January 12, 2017 &middot; <span class="reading-time" title="Estimated read time">
-  
-   1 min  read </span>
-
-  </p>
-</article>
-
-<hr>
-
-
-
-<!-- Pager -->
-
-
-<div class="clearfix">
-
-  
-  <a class="btn btn-primary float-left" href="/posts/">&larr;
-    Newer<span class="d-none d-md-inline"> Posts</span></a>
-  
-
-  
-  <a class="btn btn-primary float-right" href="/posts/page3/">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
-  
-
-</div>
-
-
-
+        </div>
 
       </div>
     </div>
-  
   </div>
 
 
