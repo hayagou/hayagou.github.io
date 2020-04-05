@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    디자인패턴 종류 - Hayagou
+    Observer 패턴 - Hayagou
     
   </title>
 
-  <meta name="description" content="[디자인패턴] 디자인패턴 종류">
+  <meta name="description" content="[디자인패턴] Observer 패턴">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="https://hayagou.github.io/designpatterns/2017/01/02/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4%EC%A2%85%EB%A5%98.html">
+  <link rel="canonical" href="https://hayagou.github.io/designpatterns/2017/01/04/Observer.html">
   <link rel="alternate" type="application/rss+xml" title="Hayagou" href="/feed.xml">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -177,11 +177,11 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>디자인패턴 종류</h1>
+            <h1>Observer 패턴</h1>
             
             <span class="meta">Posted by
               <a href="#">hayagou</a>
-              on 2017-01-02 &middot; <span class="reading-time" title="Estimated read time">
+              on 2017-01-04 &middot; <span class="reading-time" title="Estimated read time">
   
    1 min  read </span>
 
@@ -196,27 +196,38 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
-        <h1 id="디자인패턴-디자인패턴-종류">[디자인패턴] 디자인패턴 종류</h1>
+        <h1 id="디자인패턴-observer-패턴">[디자인패턴] Observer 패턴</h1>
 
-<hr />
+<blockquote>
+  <p>Observer pattern :  한  객체의  상태  변화에  따라  다른  객체의  상태도  연동되도록  <strong>일대다</strong>  <strong>객체</strong>  <strong>의존</strong>  <strong>관계를</strong>  <strong>구성</strong>  하는  패턴</p>
+</blockquote>
 
-<div class="container">
-<img src="/img/posts/ds/ds1.png" alt="디자인패턴 종류" class="img-responsive center-block" />
-</div>
+<p>데이터의  변경이  발생했을  경우  <strong>상대</strong>  <strong>클래스나</strong>  <strong>객체에</strong>  <strong>의존하지</strong>  <strong>않으면서</strong>  <strong>데이터</strong>  <strong>변경을</strong>  <strong>통보하고자</strong>  <strong>할</strong>  <strong>때</strong>  유용하다.</p>
 
-<ol>
+<p><img src="/img/posts/ds/observer.png" alt="Observer 패턴" class="img-responsive center-block" /></p>
+
+<ul>
   <li>
-    <p>생성(Creational) 패턴- 추상  팩토리(Abstract Factory) : 구제적인  클래스에  의존하지  않고  서로  연관되거나  의존적인  객체들의  조합을  만드는  인터페이스를  제공하는  패턴- 팩토리  메서드(Factory Method) : 객체  생성  처리를  서브  클래스로  분리해  처리하도록  캡슐화하는  패턴- 싱글턴(Singleton) : 전역  변수를  사용하지  않고  객체를  하나만  생성하도록  하며, 생성된  객체를  어디에서든지  참조할  수  있도록  하는  패턴</p>
+    <p>옵저버  패턴은  통보  대상  객체의  관리를 Subject 클래스와 Observer 인터페이스로  일반화한다.</p>
+
+    <ul>
+      <li>이를  통해  데이터  변경을  통보하는  클래스(ConcreteSubject)는  통보  대상  클래스나  객체(ConcreteObserver)에  대한  의존성을  없앨  수  있다.</li>
+      <li>결과적으로  통보  대상ㅇ  클래스나  대상  객체의  변경에도  <strong>통보하는</strong>  <strong>클래스</strong><strong>(ConcreteSubjectt)</strong><strong>를</strong>  <strong>수정</strong>  <strong>없이</strong>  <strong>그대로</strong>  <strong>사용할</strong>  <strong>수</strong>  <strong>있다</strong><strong>.</strong></li>
+    </ul>
   </li>
   <li>
-    <p>구조(Structural) 패턴- 컴퍼지트(Composite) : 여러  개의  객체들로  구성된  복합  객체와  단일  객체를  클라이언트에서  구별  없이  다루게  해주는  패턴- 데커레이터(Decorator) : 객체의  결합을  통해  기능을  동적으로  유연하게  확장할  수  있게  해주는  패턴</p>
-  </li>
-  <li>
-    <p>행위(Behavioral) 패턴- 옵저버(Observer) : 한  객체의  상태  변화에  따라  다른  객체의  상태도  연동되도록  일대다  객체  의존  관계를  구성하는  패턴- 스테이트(State) : 객체의  상태에  따라  객체의  행위  내용을  변경해주는  패턴- 스트래티지(Strategy) : 행위를  클래스로  캡슐화해  동적으로  행위를  자유롭게  바꿀  수  있게  해주는  패턴- 템플릿  메서드(Template Method) : 어떤  작업을  처리하는  일부분을  서브  클래스로  캡슐화해  전체  일을  수행하는  구조는  바꾸지  않으면서  특정  단계에서  수행하는  내역을  바꾸는  패턴<br />
-커멘드(Command) : 실행될  기능을  캡슐화함으로써  주어진  여러  기능을  실행할  수  있는  재사용성이  높은  클래스를  설계하는  패턴</p>
-  </li>
-</ol>
+    <p>역활이  수행하는  작업</p>
 
+    <ul>
+      <li>Observer : update메소드를  사용하여  데이터의  변경을  통보  받는  인터페이스</li>
+      <li>Subject : ConcreteObserver 객체를  관리, Observer 인터페이스를  참조해서 ConcreteObserver를  관리하므로 ConcreteObserver의  변화에  독립적일  수  있다.</li>
+      <li>ConcreteSubject : 변경  관리  대상이  되는  데이터가  있는  클래스(통보  클래스) , setState 메서드에서는  자신의  데이터인 subjectState를  변경하고 Subject의 notifyObservers 메서드를  호출해서 ConcreteObserver 객체에  변경을  통보한다</li>
+      <li>ConcreteObserver : ConcreteSubject의  변경을  통보받는  클래스, Observer 인터페이스의 update 메서드를  구현함으로써  변경을  통보받는다. 변경된  데이터는 ConcreteSubject의 getState 메서드를  호출함으로써  변경을  조회한다.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/img/posts/ds/observer2.png" alt="Observer 패턴2" class="img-responsive center-block" width="760" /></p>
 
 
         <hr>
@@ -237,11 +248,11 @@
         <div class="clearfix">
 
           
-          <a class="btn btn-primary float-left" href="/designpatterns/2017/01/02/uml.html" data-toggle="tooltip" data-placement="top" title="UML과 클래스 다이어그램">&larr; Previous<span class="d-none d-md-inline">
+          <a class="btn btn-primary float-left" href="/designpatterns/2017/01/03/Strategy.html" data-toggle="tooltip" data-placement="top" title="Strategy 패턴">&larr; Previous<span class="d-none d-md-inline">
               Post</span></a>
           
           
-          <a class="btn btn-primary float-right" href="/designpatterns/2017/01/03/Strategy_%E1%84%91%E1%85%A2%E1%84%90%E1%85%A5%E1%86%AB.html" data-toggle="tooltip" data-placement="top" title="Strategy 패턴">Next<span class="d-none d-md-inline">
+          <a class="btn btn-primary float-right" href="/web/2017/01/05/img.html" data-toggle="tooltip" data-placement="top" title="Composite Pattern">Next<span class="d-none d-md-inline">
               Post</span> &rarr;</a>
           
 
