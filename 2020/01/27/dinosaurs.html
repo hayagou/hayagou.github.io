@@ -60,7 +60,8 @@
 
   <!-- Page Header -->
 
-<header class="masthead" style="background-image: url('/img/posts/01.jpg')">
+<header class="masthead"
+  style="background-image: url('/img/posts/01.jpg')">
   
     <div class="overlay"></div>
     <div class="container">
@@ -124,11 +125,33 @@
 
         <hr>
 
+        <div id="disqus_thread"></div>
+        <script>
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          /*
+          var disqus_config = function () {
+          this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          */
+          (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://hayagou-github-io.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
         <div class="clearfix">
 
           
           
-          <a class="btn btn-primary float-right" href="/2020/01/28/dreams.html" data-toggle="tooltip" data-placement="top" title="The dreams of yesterday are the hopes of today and the reality of tomorrow.">Next<span class="d-none d-md-inline">
+          <a class="btn btn-primary float-right" href="/2020/01/28/dreams.html"
+            data-toggle="tooltip" data-placement="top" title="The dreams of yesterday are the hopes of today and the reality of tomorrow.">Next<span
+              class="d-none d-md-inline">
               Post</span> &rarr;</a>
           
 
@@ -137,7 +160,6 @@
       </div>
     </div>
   </div>
-
 
   <!-- Footer -->
 
